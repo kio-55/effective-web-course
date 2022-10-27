@@ -21,24 +21,3 @@ My name is **Kirill Grigoriev**, I am a first-year master's student at *Omsk Sta
 ### Contacts
 * <a href="mailto:kirillisomska2@gmail.com">Gmail</a>
 * [Telegram](https://t.me/kirillisomska)
-
-**bold**
-*italic*
-***bold-italic***
-~~text~~
-`x=2`
-
-```java
-int x=1;
-```
-
-+ sdf sdf
-+ sdfsdf
-+ sdf sdf sd
-  
-- [ ] dsffsd
-- [X] sdfsdf
-
-[VK](https://vk.com)
-
-![Logo](link, "text")
