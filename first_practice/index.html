@@ -1,12 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Grid</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <img
+              src="./images/logo.svg"
+              alt="Logo"
+              class="header__logo-image"
+            />
+            <h2 class="header__logo-title">Grid</h2>
+          </div>
+          <nav class="header__navigation">
+            <h2 class="header__navigation-title">How it works</h2>
+            <ul class="header__navigation-list">
+              <li class="header__navigation-item">
+                <a href="#" class="header__navigation-link">Who we are</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#" class="header__navigation-link">What we do</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#" class="header__navigation-link">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__button">Sign In</a>
+        </div>
+      </div>
+    </header>
+    <section class="example">
+      <div class="container">
+        <header class="example__header">
+          <h2 class="example__title">
+            Combine
+            <span class="example__title example__title_colored">fine</span>
+            images
+          </h2>
+          <h3 class="example__subtitle">To represent a product</h3>
+        </header>
+      </div>
+      <div class="example__content">
+        <div class="example__item example__item_1">
+          <p class="example__item-text">
+            Use mixed grid with imagery, replace with your own photos and
+            descriptions
+          </p>
+        </div>
+        <div class="example__item example__item_2 example__item_centered-text">
+          <h2 class="example__item-title">Image Title</h2>
+        </div>
+        <div class="example__item example__item_3">
+          <p class="example__item-text">
+            This is multipurpose grid, it fits for portfolio, services or agency
+            web site
+          </p>
+        </div>
+        <div class="example__item example__item_4">
+          <h2 class="example__item-subtitle">
+            We aimed to deliver HQ templates for Figma
+          </h2>
+          <p class="example__item-text_centered">Used by 123 people</p>
+        </div>
+        <div
+          class="example__item example__item_5 example__item_base example__item_purple"
+        ></div>
+        <div
+          class="example__item example__item_6 example__item_base example__item_blue example__item_centered-text"
+        >
+          <img src="./images/boot.png" alt="boot" />
+        </div>
+        <a class="example__item example__item_7 example__item_button" href="#"
+          >Learn more</a
+        >
+        <div class="example__item example__item_8"></div>
+        <div class="example__item example__item_9 example__item_centered-text">
+          <h2 class="example__item-title">Caption</h2>
+        </div>
+        <div
+          class="example__item example__item_10 example__item_base example__item_pink"
+        ></div>
+      </div>
+    </section>
+    <section class="pricing">
+      <div class="container">
+        <div class="pricing__inner">
+          <h2 class="pricing__title">Affordable pricing</h2>
+          <h3 class="pricing__subtitle">
+            Bill me <span class="pricing__subtitle_colored">monthly</span> •
+            yearly
+          </h3>
+          <div class="pricing__items">
+            <div class="pricing__item">
+              <header class="pricing__item-header">
+                <h3 class="pricing__item-title">Like a pussy</h3>
+              </header>
+              <p class="pricing__item-price">
+                Free
+                <span class="pricing__item-price pricing__item-price_lover"
+                  >/forever</span
+                >
+              </p>
+              <ul class="pricing__item-list">
+                <li class="pricing__item-feature">Components-driven system</li>
+                <li class="pricing__item-feature">
+                  Sales-boosting landing pages
+                </li>
+                <li class="pricing__item-feature">
+                  Awesome Feather icons pack
+                </li>
+              </ul>
+              <a href="#" class="pricing__button">Try for free</a>
+            </div>
+            <div class="pricing__item pricing__item_mod">
+                <header class="pricing__item-header">
+                  <h3 class="pricing__item-title ">👤 Individual</h3>
+                  <p class="pricing__item-spec">BEST!</p>
+                </header>
+                <p class="pricing__item-price">
+                    $24
+                  <span class="pricing__item-price pricing__item-price_lover"
+                    >/ month</span
+                  >
+                </p>
+                <ul class="pricing__item-list">
+                  <li class="pricing__item-feature pricing__item-feature_yellow">Components-driven system</li>
+                  <li class="pricing__item-feature pricing__item-feature_yellow">
+                    Sales-boosting landing pages
+                  </li>
+                  <li class="pricing__item-feature pricing__item-feature_yellow">
+                    Awesome Feather icons pack
+                  </li>
+                  <li class="pricing__item-feature pricing__item-feature_yellow">
+                    Themed into 3 different styles
+                  </li>
+                  <li class="pricing__item-feature pricing__item-feature_yellow">
+                    Will help to learn Figma
+                  </li>
+                </ul>
+                <a href="#" class="pricing__button">Regular license</a>
+              </div>
+              <div class="pricing__item">
+                <header class="pricing__item-header">
+                  <h3 class="pricing__item-title">👥 Corporate</h3>
+                </header>
+                <p class="pricing__item-price">
+                    $12
+                  <span class="pricing__item-price pricing__item-price_lover"
+                    >/ editor</span
+                  >
+                </p>
+                <ul class="pricing__item-list">
+                  <li class="pricing__item-feature pricing__item-feature_aqua">Components-driven system</li>
+                  <li class="pricing__item-feature pricing__item-feature_aqua">
+                    Sales-boosting landing pages
+                  </li>
+                  <li class="pricing__item-feature pricing__item-feature_aqua">
+                    Awesome Feather icons pack
+                  </li>
+                  <li class="pricing__item-feature pricing__item-feature_aqua">
+                    Themed into 3 different styles
+                  </li>
+                </ul>
+                <a href="#" class="pricing__button">Extended license</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
