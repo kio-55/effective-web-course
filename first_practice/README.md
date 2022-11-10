@@ -5,7 +5,7 @@ ___
 
 ## Checklist
 
-- [] 1. Layout is semantically correct
+- [ ] 1. Layout is semantically correct
 - [ ] 2. The document must be validated
 - [ ] 3. Use modern technologies and approaches (for example, flexbox & grid)
 - [ ] 4. Styles must be grouped, groups marked with comments
