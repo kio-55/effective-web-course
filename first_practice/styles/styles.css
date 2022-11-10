@@ -285,6 +285,10 @@ body {
 
 .example__item_blue {
   background-color: var(--blue-dark-color);
+  background-image: url(../images/boot.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .example__item_6 {
