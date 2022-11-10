@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Timer</h1>
+    </header>
+    <main class="content timer">
+      <div class="container">
+        <input
+          class="timer__input"
+          type="number"
+          name="min"
+          value="0"
+          id="min"
+          max="60"
+          min="0"
+        />
+        <input
+          class="timer__input"
+          type="number"
+          name="sec"
+          value="0"
+          id="sec"
+          max="60"
+          min="0"
+        />
+        <button class="start__button">Старт</button>
+        <button class="pause__button">Пауза</button>
+        <button class="stop__button">Стоп</button>
+      </div>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
