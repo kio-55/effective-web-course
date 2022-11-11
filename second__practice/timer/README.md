@@ -2,7 +2,7 @@
 
 **effective-web-course** repository was created for practical training during the web programming course developed by [Effective](http://effective.band/).
 
-**timer** -  simple timer with a choice of preset times. At the end of the timer, music is played and the background color changes
+**timer** -  simple timer with a choice of preset times. At the end of the timer, music is played and the background color changes [Пример](https://timer-ochre-tau.vercel.app/)
 ___
 
 ## Practice Checklist
