@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Timer</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Timer</h1>
+      </div>
+    </header>
+    <main class="timer">
+      <div class="container">
+        <div class="timer__inner">
+          <div class="timer__pre-timer-buttons">
+            <button class="timer__pre-timer-button" value="1">1 minute</button>
+            <button class="timer__pre-timer-button" value="5">5 minutes</button>
+            <button class="timer__pre-timer-button" value="10">
+              10 minutes
+            </button>
+          </div>
+          <div class="timer__inputs">
+            <input
+              class="timer__input"
+              type="number"
+              name="min"
+              value="0"
+              id="min"
+              max="60"
+              min="0"
+            />
+            <input
+              class="timer__input"
+              type="number"
+              name="sec"
+              value="0"
+              id="sec"
+              max="60"
+              min="0"
+            />
+          </div>
+          <div class="timer__buttons">
+            <button class="timer__button start__button">Start</button>
+            <button class="timer__button pause__button">Stop</button>
+            <button class="timer__button stop__button">Reset</button>
+          </div>
+          <div class="timer__errors errors"></div>
+        </div>
+      </div>
+    </main>
+    <audio loop class="music">
+      <source src="./music/music.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

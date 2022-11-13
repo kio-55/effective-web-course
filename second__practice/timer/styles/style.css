@@ -1,0 +1,133 @@
+:root {
+  --main-red-color: #fa8072;
+  --main-background-color: #4169e1;
+  --main-gray-color: #c0c0c0;
+  --white-color: #fff;
+  --green-color: #228b22;
+  --orange-color: #ffa500;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-background-color);
+}
+
+.red {
+  background-color: var(--main-red-color);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+.header {
+  position: relative;
+}
+
+.header::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-gray-color);
+  box-shadow: 1px 1px 15px var(--main-gray-color);
+  bottom: -10px;
+}
+
+.header__title {
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.timer__inner {
+  background-color: var(--white-color);
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px var(--main-gray-color);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.timer__pre-timer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.timer__pre-timer-button,
+.timer__button {
+  max-width: 170px;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--main-background-color);
+  color: var(--white-color);
+  transition: all 2s;
+  box-shadow: 1px 1px 10px var(--main-gray-color);
+}
+
+.timer__pre-timer-button:hover,
+.timer__button:hover {
+  background-color: var(--white-color);
+  color: var(--main-background-color);
+}
+
+.timer__pre-timer-button:disabled {
+  opacity: 0.4;
+}
+
+.timer__inputs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timer__input {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--main-background-color);
+  color: var(--main-background-color);
+  font-size: 35px;
+  text-align: center;
+}
+
+.timer__input:focus {
+  outline: none;
+}
+
+.timer__input:disabled {
+  opacity: 0.4;
+}
+
+.timer__buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.start__button {
+  background-color: var(--green-color);
+}
+
+.pause__button {
+    background-color: var(--orange-color);
+}
+
+.stop__button {
+    background-color: var(--main-red-color);
+}
