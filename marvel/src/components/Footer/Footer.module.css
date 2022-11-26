@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: #848482;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+.logo {
+  max-width: 250px;
+}
+
+.title {
+  font-size: 25px;
+  color: #fff;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link:hover {
+  color: gold;
+}
