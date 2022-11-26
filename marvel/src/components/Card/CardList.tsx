@@ -8,7 +8,6 @@ const CardList: React.FC<CardTypes[]> = (cards) => {
   return (
     <div className={styles.list}>
       {cards.map((card) => {
-        console.log(card);
         return <CardItem key={card.id} {...card}></CardItem>;
       })}
     </div>
