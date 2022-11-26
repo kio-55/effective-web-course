@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import logo from './marvel_logo.svg';
+import logo from '../../assets/marvel_logo.svg';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {

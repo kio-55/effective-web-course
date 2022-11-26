@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from './marvel_logo.svg';
+import logo from '../../assets/marvel_logo.svg';
 import styles from './Footer.module.css';
 import currYear from '../../config/environments';
 

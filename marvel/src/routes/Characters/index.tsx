@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import charractersJSON from '../../assets/characters.json';
+import charractersJSON from '../../mocks/characters.json';
 import type { CardTypes } from '../../types/card';
 import { Input } from 'antd';
 

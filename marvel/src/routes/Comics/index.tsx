@@ -5,11 +5,11 @@ import { Input } from 'antd';
 
 const { Search } = Input;
 
-const onSearch = (value: string) => console.log(value);
-
 import styles from './Comics.module.css';
-import comicsJSON from '../../assets/comics.json';
+import comicsJSON from '../../mocks/comics.json';
 import CardList from '../../components/Card/CardList';
+
+const onSearch = (value: string) => console.log(value);
 
 const Comics: React.FC = () => {
   const [comicsList, setComics] = useState<CardTypes[]>();

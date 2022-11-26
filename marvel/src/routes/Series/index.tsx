@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CardTypes } from '../../types/card';
 
 import styles from './Series.module.css';
-import seriesJSON from '../../assets/series.json';
+import seriesJSON from '../../mocks/series.json';
 import CardList from '../../components/Card/CardList';
 
 import { Input } from 'antd';
