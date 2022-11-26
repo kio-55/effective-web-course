@@ -4,6 +4,8 @@ import Layout from '../layouts/Layout';
 import NoMatch from './NoMatch';
 import Home from './Home';
 import Characters from './Characters';
+import Comics from './Comics';
+import Series from './Series';
 
 const routes: RouteObject[] = [
   {
@@ -14,6 +16,14 @@ const routes: RouteObject[] = [
       {
         path: '/characters',
         element: <Characters />
+      },
+      {
+        path: '/comics',
+        element: <Comics />
+      },
+      {
+        path: '/series',
+        element: <Series />
       },
       { path: '*', element: <NoMatch /> }
     ]

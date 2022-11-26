@@ -1,5 +1,5 @@
 .header {
-  background-color: red;
+  background-color: #1890ff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,11 +27,11 @@
 }
 
 .active {
-  color: gold;
+  border-bottom: 2px solid #fff;
 }
 
 .link::before {
-  content: "";
+  content: '';
   width: 100%;
   transform: translateX(-100%);
   background-color: #fff;

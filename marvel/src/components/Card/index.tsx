@@ -1,14 +1,25 @@
 import React from 'react';
 import type { CardTypes } from '../../types/card';
+import { Card } from 'antd';
 
-const Card: React.FC<CardTypes> = ({ id, imageUrl, title, description }) => {
+const { Meta } = Card;
+
+const CardItem: React.FC<CardTypes> = ({
+  id,
+  imageUrl,
+  title,
+  description
+}) => {
   return (
-    <div>
-      <img src={imageUrl} alt="" />
-      <h1>{title}</h1>
-      <p>{description}</p>
-    </div>
+    <Card
+      hoverable
+      style={{ width: 240 }}
+      size="small"
+      cover={<img alt="example" src={imageUrl} />}
+    >
+      <Meta title={title} description={description} style={{ height: 140 }} />
+    </Card>
   );
 };
 
-export default Card;
+export default CardItem;

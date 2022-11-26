@@ -1,40 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import charractersJSON from '../../assets/characters.json';
-import type { CardTypes } from '../../types/card';
+import { CardTypes } from '../../types/card';
+
 import { Input } from 'antd';
 
 const { Search } = Input;
 
-import CardList from '../../components/Card/CardList';
-
-import styles from './Charactrers.module.css';
-
 const onSearch = (value: string) => console.log(value);
 
-const Characters: React.FC = () => {
-  const [charactersList, setCharacters] = useState<CardTypes[]>();
+import styles from './Comics.module.css';
+import comicsJSON from '../../assets/comics.json';
+import CardList from '../../components/Card/CardList';
+
+const Comics: React.FC = () => {
+  const [comicsList, setComics] = useState<CardTypes[]>();
 
   useEffect(() => {
-    const characters: CardTypes[] = [];
-    charractersJSON.map((item) => {
-      characters.push({
+    const comics: CardTypes[] = [];
+    comicsJSON.map((item) => {
+      comics.push({
         id: item.id,
         imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
         description: item.description,
-        title: item.name
+        title: item.title
       });
     });
-    setCharacters(characters);
+    setComics(comics);
   }, []);
-  if (charactersList) {
+  if (comicsList) {
     return (
       <div>
         <header className={styles.header}>
           <div className={styles.title}>
             <h1 className={styles.title__text}>Characters</h1>
-            <span className={styles.title__counter}>
-              ({charactersList.length})
-            </span>
+            <span className={styles.title__counter}>({comicsList.length})</span>
           </div>
           <Search
             placeholder="Search hero ..."
@@ -44,7 +42,7 @@ const Characters: React.FC = () => {
             onSearch={onSearch}
           />
         </header>
-        <CardList {...charactersList}></CardList>
+        <CardList {...comicsList}></CardList>
       </div>
     );
   } else {
@@ -52,4 +50,4 @@ const Characters: React.FC = () => {
   }
 };
 
-export default Characters;
+export default Comics;

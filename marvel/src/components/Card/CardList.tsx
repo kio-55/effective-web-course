@@ -1,13 +1,18 @@
 import React from 'react';
 import type { CardTypes } from '../../types/card';
-import Card from '.';
+import CardItem from '.';
+import styles from './Card.module.css';
 
 const CardList: React.FC<CardTypes[]> = (cards) => {
-  const printCards = () =>
-    cards.map((card) => {
-      <Card key={card.id} {...card}></Card>;
-    });
-  return <>printCards();</>;
+  cards = Object.values(cards);
+  return (
+    <div className={styles.list}>
+      {cards.map((card) => {
+        console.log(card);
+        return <CardItem key={card.id} {...card}></CardItem>;
+      })}
+    </div>
+  );
 };
 
 export default CardList;
