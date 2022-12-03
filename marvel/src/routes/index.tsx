@@ -6,6 +6,9 @@ import Home from './Home';
 import Characters from './Characters';
 import Comics from './Comics';
 import Series from './Series';
+import CharactersFullPage from './Characters/CharactersFullPage';
+import ComicsFullPage from './Comics/ComicsFullPage';
+import SeriesFullPage from './Series/SeriesFullPage';
 
 const routes: RouteObject[] = [
   {
@@ -15,15 +18,24 @@ const routes: RouteObject[] = [
       { index: true, element: <Home /> },
       {
         path: '/characters',
-        element: <Characters />
+        children: [
+          { index: true, element: <Characters /> },
+          { path: '/characters/:id', element: <CharactersFullPage /> }
+        ]
       },
       {
         path: '/comics',
-        element: <Comics />
+        children: [
+          { index: true, element: <Comics /> },
+          { path: '/comics/:id', element: <ComicsFullPage /> }
+        ]
       },
       {
         path: '/series',
-        element: <Series />
+        children: [
+          { index: true, element: <Series /> },
+          { path: '/series/:id', element: <SeriesFullPage /> }
+        ]
       },
       { path: '*', element: <NoMatch /> }
     ]
