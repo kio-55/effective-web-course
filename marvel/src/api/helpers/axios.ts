@@ -2,7 +2,7 @@ import axios from 'axios';
 import md5 from 'md5';
 
 import env from '../../config/environments';
-const ts = new Date().toString();
+const ts = new Date().getMilliseconds();
 console.log(
   ts +
     '    ' +
