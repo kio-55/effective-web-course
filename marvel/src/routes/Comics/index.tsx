@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CardTypes } from '../../types/card';
+import comicsGet from '../../api/comics';
 
 import { Input } from 'antd';
 
@@ -15,6 +16,7 @@ const Comics: React.FC = () => {
   const [comicsList, setComics] = useState<CardTypes[]>();
 
   useEffect(() => {
+    comicsGet.getComicsList();
     const comics: CardTypes[] = [];
     comicsJSON.map((item) => {
       comics.push({
