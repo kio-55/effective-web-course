@@ -23,8 +23,8 @@
       }
     ],
     "series": {
-      "resourceURI": "http://gateway.marvel.com/v1/public/series/23665",
-      "name": "Marvel Previews (2017 - Present)"
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+      "name": " Fantastic Four by Dan Slott Vol. 1 (2021)"
     },
     "variants": [
       {
@@ -112,10 +112,31 @@
       "returned": 1
     },
     "characters": {
-      "available": 0,
-      "collectionURI": "http://gateway.marvel.com/v1/public/comics/82967/characters",
-      "items": [],
-      "returned": 0
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        }
+      ],
+      "returned": 5
     },
     "stories": {
       "available": 2,
@@ -165,8 +186,8 @@
       }
     ],
     "series": {
-      "resourceURI": "http://gateway.marvel.com/v1/public/series/23665",
-      "name": "Marvel Previews (2017 - Present)"
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+      "name": " Fantastic Four by Dan Slott Vol. 1 (2021)"
     },
     "variants": [
       {
@@ -248,10 +269,31 @@
       "returned": 0
     },
     "characters": {
-      "available": 0,
-      "collectionURI": "http://gateway.marvel.com/v1/public/comics/82965/characters",
-      "items": [],
-      "returned": 0
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        }
+      ],
+      "returned": 5
     },
     "stories": {
       "available": 0,
@@ -294,8 +336,8 @@
       }
     ],
     "series": {
-      "resourceURI": "http://gateway.marvel.com/v1/public/series/23665",
-      "name": "Marvel Previews (2017 - Present)"
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+      "name": " Fantastic Four by Dan Slott Vol. 1 (2021)"
     },
     "variants": [
       {
@@ -388,10 +430,31 @@
       "returned": 1
     },
     "characters": {
-      "available": 0,
-      "collectionURI": "http://gateway.marvel.com/v1/public/comics/82970/characters",
-      "items": [],
-      "returned": 0
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        }
+      ],
+      "returned": 5
     },
     "stories": {
       "available": 1,
@@ -442,8 +505,8 @@
       }
     ],
     "series": {
-      "resourceURI": "http://gateway.marvel.com/v1/public/series/649",
-      "name": "Gun Theory (2003)"
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+      "name": " Fantastic Four by Dan Slott Vol. 1 (2021)"
     },
     "variants": [],
     "collections": [],
@@ -481,10 +544,31 @@
       "returned": 0
     },
     "characters": {
-      "available": 0,
-      "collectionURI": "http://gateway.marvel.com/v1/public/comics/331/characters",
-      "items": [],
-      "returned": 0
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        }
+      ],
+      "returned": 5
     },
     "stories": {
       "available": 2,
@@ -540,8 +624,8 @@
       }
     ],
     "series": {
-      "resourceURI": "http://gateway.marvel.com/v1/public/series/565",
-      "name": "Startling Stories: The Incorrigible Hulk (2004)"
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+      "name": " Fantastic Four by Dan Slott Vol. 1 (2021)"
     },
     "variants": [],
     "collections": [],
@@ -580,15 +664,31 @@
       "returned": 1
     },
     "characters": {
-      "available": 1,
+      "available": 5,
       "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009351",
-          "name": "Hulk"
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
         }
       ],
-      "returned": 1
+      "returned": 5
     },
     "stories": {
       "available": 2,

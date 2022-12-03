@@ -78,7 +78,7 @@ const SeriesFullPage: React.FC = () => {
               <Link
                 key={character.resourceURI}
                 to={
-                  '/series/' +
+                  '/characters/' +
                   new URL(character.resourceURI).pathname.replace(
                     '/v1/public/characters/',
                     ''

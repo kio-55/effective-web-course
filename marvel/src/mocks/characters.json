@@ -10,78 +10,58 @@
     },
     "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
     "comics": {
-      "available": 12,
+      "available": 5,
       "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
-          "name": "Avengers: The Initiative (2007) #14"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
-          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
-          "name": "Avengers: The Initiative (2007) #15"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
-          "name": "Avengers: The Initiative (2007) #16"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
-          "name": "Avengers: The Initiative (2007) #17"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
-          "name": "Avengers: The Initiative (2007) #18"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
-          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
-          "name": "Avengers: The Initiative (2007) #19"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
-          "name": "Deadpool (1997) #44"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
-          "name": "Marvel Premiere (1972) #35"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
-          "name": "Marvel Premiere (1972) #36"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
-          "name": "Marvel Premiere (1972) #37"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 12
+      "returned": 5
     },
     "series": {
-      "available": 3,
+      "available": 5,
       "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
-          "name": "Avengers: The Initiative (2007 - 2010)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+          "name": "Fantastic Four by Dan Slott Vol. 1 (2021)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
-          "name": "Deadpool (1997 - 2002)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/26024",
+          "name": "Superior Spider-Man Vol. 2: Otto-matic (2019)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
-          "name": "Marvel Premiere (1972 - 1981)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/18454",
+          "name": "100th Anniversary Special (2014)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13379",
+          "name": "15 Love (2011)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13380",
+          "name": "15-Love GN-TPB (2013 - Present)"
         }
       ],
-      "returned": 3
+      "returned": 5
     },
     "stories": {
       "available": 21,
@@ -227,42 +207,58 @@
     },
     "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
     "comics": {
-      "available": 4,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1017100/comics",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/47176",
-          "name": "FREE COMIC BOOK DAY 2013 1 (2013) #1"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40632",
-          "name": "Hulk (2008) #53"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40630",
-          "name": "Hulk (2008) #54"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40628",
-          "name": "Hulk (2008) #55"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 4
+      "returned": 5
     },
     "series": {
-      "available": 2,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1017100/series",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/17765",
-          "name": "FREE COMIC BOOK DAY 2013 1 (2013)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+          "name": "Fantastic Four by Dan Slott Vol. 1 (2021)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/3374",
-          "name": "Hulk (2008 - 2012)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/26024",
+          "name": "Superior Spider-Man Vol. 2: Otto-matic (2019)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/18454",
+          "name": "100th Anniversary Special (2014)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13379",
+          "name": "15 Love (2011)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13380",
+          "name": "15-Love GN-TPB (2013 - Present)"
         }
       ],
-      "returned": 2
+      "returned": 5
     },
     "stories": {
       "available": 7,
@@ -334,178 +330,58 @@
     },
     "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
     "comics": {
-      "available": 52,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009144/comics",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/36763",
-          "name": "Ant-Man & the Wasp (2010) #3"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/17553",
-          "name": "Avengers (1998) #67"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/7340",
-          "name": "Avengers (1963) #87"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/4214",
-          "name": "Avengers and Power Pack Assemble! (2006) #2"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/63217",
-          "name": "Avengers and Power Pack (2017) #3"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/63218",
-          "name": "Avengers and Power Pack (2017) #4"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/63219",
-          "name": "Avengers and Power Pack (2017) #5"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/63220",
-          "name": "Avengers and Power Pack (2017) #6"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/64790",
-          "name": "Avengers by Brian Michael Bendis: The Complete Collection Vol. 2 (Trade Paperback)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/103371",
-          "name": "Avengers Unlimited Infinity Comic (2022) #17"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/1170",
-          "name": "Avengers Vol. 2: Red Zone (Trade Paperback)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/1214",
-          "name": "Avengers Vol. II: Red Zone (Trade Paperback)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/12787",
-          "name": "Captain America (1998) #28"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/7513",
-          "name": "Captain America (1968) #132"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/7514",
-          "name": "Captain America (1968) #133"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/65466",
-          "name": "Captain America by Mark Waid, Ron Garney & Andy Kubert (Hardcover)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/20367",
-          "name": "Defenders (1972) #57"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/31068",
-          "name": "Incredible Hulks (2010) #606 (VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/46168",
-          "name": "Indestructible Hulk (2012) #3"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/43944",
-          "name": "Iron Man (2012) #1"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 20
+      "returned": 5
     },
     "series": {
-      "available": 35,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009144/series",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/13082",
-          "name": "Ant-Man & the Wasp (2010 - 2011)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+          "name": "Fantastic Four by Dan Slott Vol. 1 (2021)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/354",
-          "name": "Avengers (1998 - 2004)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/26024",
+          "name": "Superior Spider-Man Vol. 2: Otto-matic (2019)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1991",
-          "name": "Avengers (1963 - 1996)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/18454",
+          "name": "100th Anniversary Special (2014)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/23123",
-          "name": "Avengers and Power Pack (2017)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13379",
+          "name": "15 Love (2011)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1046",
-          "name": "Avengers and Power Pack Assemble! (2006)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/23600",
-          "name": "Avengers by Brian Michael Bendis: The Complete Collection Vol. 2 (2017)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/35600",
-          "name": "Avengers Unlimited Infinity Comic (2022 - Present)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/227",
-          "name": "Avengers Vol. 2: Red Zone (2003)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/271",
-          "name": "Avengers Vol. II: Red Zone (2003)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1996",
-          "name": "Captain America (1968 - 1996)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1997",
-          "name": "Captain America (1998 - 2002)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/23810",
-          "name": "Captain America by Mark Waid, Ron Garney & Andy Kubert (2017)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/3743",
-          "name": "Defenders (1972 - 1986)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/8842",
-          "name": "Incredible Hulks (2010 - 2011)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/16583",
-          "name": "Indestructible Hulk (2012 - 2014)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/16593",
-          "name": "Iron Man (2012 - 2014)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2029",
-          "name": "Iron Man (1968 - 1996)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/23915",
-          "name": "Iron Man Epic Collection: Doom (2018)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/9718",
-          "name": "Marvel Adventures Super Heroes (2010 - 2012)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/189",
-          "name": "Marvel Masterworks: Captain America Vol. 1 - 2nd Edition (2003)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13380",
+          "name": "15-Love GN-TPB (2013 - Present)"
         }
       ],
-      "returned": 20
+      "returned": 5
     },
     "stories": {
       "available": 55,
@@ -646,86 +522,58 @@
     },
     "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
     "comics": {
-      "available": 14,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010699/comics",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40776",
-          "name": "Dark Avengers (2012) #177"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40773",
-          "name": "Dark Avengers (2012) #179"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40774",
-          "name": "Dark Avengers (2012) #180"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40778",
-          "name": "Dark Avengers (2012) #181"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40787",
-          "name": "Dark Avengers (2012) #182"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/40786",
-          "name": "Dark Avengers (2012) #183"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/38073",
-          "name": "Hulk (2008) #43"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/11910",
-          "name": "Universe X (2000) #6"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/11911",
-          "name": "Universe X (2000) #7"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/11912",
-          "name": "Universe X (2000) #8"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/11913",
-          "name": "Universe X (2000) #9"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/11903",
-          "name": "Universe X (2000) #10"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/11904",
-          "name": "Universe X (2000) #11"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/11905",
-          "name": "Universe X (2000) #12"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 14
+      "returned": 5
     },
     "series": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010699/series",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/789",
-          "name": "Dark Avengers (2012 - 2013)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+          "name": "Fantastic Four by Dan Slott Vol. 1 (2021)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/3374",
-          "name": "Hulk (2008 - 2012)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/26024",
+          "name": "Superior Spider-Man Vol. 2: Otto-matic (2019)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2085",
-          "name": "Universe X (2000 - 2001)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/18454",
+          "name": "100th Anniversary Special (2014)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13379",
+          "name": "15 Love (2011)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13380",
+          "name": "15-Love GN-TPB (2013 - Present)"
         }
       ],
-      "returned": 3
+      "returned": 5
     },
     "stories": {
       "available": 27,
@@ -862,178 +710,58 @@
     },
     "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
     "comics": {
-      "available": 55,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009146/comics",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/17547",
-          "name": "Avengers (1998) #61"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/17548",
-          "name": "Avengers (1998) #62"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/1098",
-          "name": "Avengers Vol. 1: World Trust (Trade Paperback)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8557",
-          "name": "Earth X (1999) #7"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/4241",
-          "name": "EARTH X TPB [NEW PRINTING] (Trade Paperback)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/20863",
-          "name": "Hulk (2008) #3"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/2499",
-          "name": "Hulk: Destruction (2005) #4"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/14424",
-          "name": "Hulk (1999) #24"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/14425",
-          "name": "Hulk (1999) #25"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/14428",
-          "name": "Hulk (1999) #28"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/14450",
-          "name": "Hulk (1999) #50"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/14451",
-          "name": "Hulk (1999) #51"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/14453",
-          "name": "Hulk (1999) #53"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/14454",
-          "name": "Hulk (1999) #54"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8948",
-          "name": "Incredible Hulk (1962) #137"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8982",
-          "name": "Incredible Hulk (1962) #171"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/9005",
-          "name": "Incredible Hulk (1962) #194"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/9006",
-          "name": "Incredible Hulk (1962) #195"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/9007",
-          "name": "Incredible Hulk (1962) #196"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/9011",
-          "name": "Incredible Hulk (1962) #200"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 20
+      "returned": 5
     },
     "series": {
-      "available": 27,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009146/series",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/354",
-          "name": "Avengers (1998 - 2004)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/31445",
+          "name": "Fantastic Four by Dan Slott Vol. 1 (2021)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/158",
-          "name": "Avengers Vol. 1: World Trust (2003)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/26024",
+          "name": "Superior Spider-Man Vol. 2: Otto-matic (2019)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/378",
-          "name": "Earth X (1999 - 2000)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/18454",
+          "name": "100th Anniversary Special (2014)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1806",
-          "name": "EARTH X TPB [NEW PRINTING] (2006)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13379",
+          "name": "15 Love (2011)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/3374",
-          "name": "Hulk (2008 - 2012)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/465",
-          "name": "Hulk (1999 - 2008)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/924",
-          "name": "Hulk: Destruction (2005)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2021",
-          "name": "Incredible Hulk (1962 - 1999)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2983",
-          "name": "Incredible Hulk Annual (1976 - 1994)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/22424",
-          "name": "Incredible Hulk Epic Collection: The Hulk Must Die (2017)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/212",
-          "name": "Incredible Hulk Vol. 4: Abominable (2003)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/244",
-          "name": "Incredible Hulk Vol. IV: Abominable (2003)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/8842",
-          "name": "Incredible Hulks (2010 - 2011)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2572",
-          "name": "Iron Man (1998 - 2004)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/977",
-          "name": "Irredeemable Ant-Man (2006 - 2007)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2423",
-          "name": "Irredeemable Ant-Man Vol. 1: Low-Life (2007)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/3722",
-          "name": "Killraven (2002 - 2003)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2437",
-          "name": "KILLRAVEN PREMIERE HC (2007)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/32108",
-          "name": "Maestro: World War M (2022)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/21675",
-          "name": "Marvel Cinematic Universe Guidebook: The Avengers Initiative (2017)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/13380",
+          "name": "15-Love GN-TPB (2013 - Present)"
         }
       ],
-      "returned": 20
+      "returned": 5
     },
     "stories": {
       "available": 65,

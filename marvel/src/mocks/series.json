@@ -32,10 +32,31 @@
       "returned": 1
     },
     "characters": {
-      "available": 0,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/31445/characters",
-      "items": [],
-      "returned": 0
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        }
+      ],
+      "returned": 5
     },
     "stories": {
       "available": 2,
@@ -55,15 +76,31 @@
       "returned": 2
     },
     "comics": {
-      "available": 1,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/31445/comics",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/91992",
-          "name": " Fantastic Four by Dan Slott Vol. 1 (Hardcover)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 1
+      "returned": 5
     },
     "events": {
       "available": 0,
@@ -122,15 +159,31 @@
       "returned": 4
     },
     "characters": {
-      "available": 1,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/26024/characters",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
-          "name": "Spider-Man (Peter Parker)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
         }
       ],
-      "returned": 1
+      "returned": 5
     },
     "stories": {
       "available": 2,
@@ -150,15 +203,31 @@
       "returned": 2
     },
     "comics": {
-      "available": 1,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/26024/comics",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/71400",
-          "name": " Superior Spider-Man Vol. 2: Otto-matic (Trade Paperback)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 1
+      "returned": 5
     },
     "events": {
       "available": 0,
@@ -222,10 +291,31 @@
       "returned": 5
     },
     "characters": {
-      "available": 0,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/18454/characters",
-      "items": [],
-      "returned": 0
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        }
+      ],
+      "returned": 5
     },
     "stories": {
       "available": 10,
@@ -286,27 +376,27 @@
     },
     "comics": {
       "available": 5,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/18454/comics",
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/49010",
-          "name": "100th Anniversary Special (2014) #1"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/49009",
-          "name": "100th Anniversary Special (2014) #1"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/49011",
-          "name": "100th Anniversary Special (2014) #1"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/49007",
-          "name": "100th Anniversary Special (2014) #1"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/49008",
-          "name": "100th Anniversary Special (2014) #1"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
       "returned": 5
@@ -363,10 +453,31 @@
       "returned": 3
     },
     "characters": {
-      "available": 0,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/13379/characters",
-      "items": [],
-      "returned": 0
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        }
+      ],
+      "returned": 5
     },
     "stories": {
       "available": 9,
@@ -421,23 +532,31 @@
       "returned": 9
     },
     "comics": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/13379/comics",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/37254",
-          "name": "15 Love (2011) #1"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/37251",
-          "name": "15 Love (2011) #2"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
         },
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/37253",
-          "name": "15 Love (2011) #3"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 3
+      "returned": 5
     },
     "events": {
       "available": 0,
@@ -475,10 +594,31 @@
       "returned": 0
     },
     "characters": {
-      "available": 0,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/13380/characters",
-      "items": [],
-      "returned": 0
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/183/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+          "name": "3-D Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017100",
+          "name": "A-Bomb (HAS)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+          "name": "A.I.M."
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010699",
+          "name": "Aaron Stack"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        }
+      ],
+      "returned": 5
     },
     "stories": {
       "available": 2,
@@ -498,15 +638,31 @@
       "returned": 2
     },
     "comics": {
-      "available": 1,
-      "collectionURI": "http://gateway.marvel.com/v1/public/series/13380/comics",
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
       "items": [
         {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/37252",
-          "name": "15-Love GN-TPB (Graphic Novel)"
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82967",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82965",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82970",
+          "name": "Marvel Previews (2017)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/331",
+          "name": "Gun Theory (2003) #4"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/183",
+          "name": "Startling Stories: The Incorrigible Hulk (2004) #1"
         }
       ],
-      "returned": 1
+      "returned": 5
     },
     "events": {
       "available": 0,
