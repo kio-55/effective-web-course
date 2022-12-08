@@ -3,13 +3,6 @@ import md5 from 'md5';
 
 import env from '../../config/environments';
 const ts = new Date().getMilliseconds();
-console.log(
-  ts +
-    '    ' +
-    env.publicKey +
-    '     ' +
-    md5(ts + env.privateKey + env.publicKey).toString()
-);
 
 const instanse = axios.create({
   baseURL: env.baseUrl,

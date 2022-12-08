@@ -42,7 +42,7 @@ const Series: React.FC = () => {
             onSearch={onSearch}
           />
         </header>
-        <CardList {...seriesList}></CardList>
+        <CardList {...{ cards: seriesList, loading: false }}></CardList>
       </div>
     );
   } else {

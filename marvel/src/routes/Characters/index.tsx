@@ -44,7 +44,7 @@ const Characters: React.FC = () => {
             onSearch={onSearch}
           />
         </header>
-        <CardList {...charactersList}></CardList>
+        <CardList {...{ cards: charactersList, loading: false }}></CardList>
       </div>
     );
   } else {
