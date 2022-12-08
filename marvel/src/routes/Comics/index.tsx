@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { CardTypes } from '../../types/card';
 import { observer } from 'mobx-react-lite';
-import { Pagination, Input } from 'antd';
+import { Pagination } from 'antd';
+import Search from 'components/Search/Search';
 
 import comicsStore from 'stores/ComicsStore';
 
-const { Search } = Input;
-
-import styles from './Comics.module.css';
 import CardList from '../../components/Card/CardList';
 import { comicType } from 'types/comics';
 
@@ -45,19 +43,14 @@ const Comics: React.FC = () => {
 
   return (
     <div>
-      <header className={styles.header}>
-        <div className={styles.title}>
-          <h1 className={styles.title__text}>Comics</h1>
-          <span className={styles.title__counter}>({comicsCount})</span>
-        </div>
-        <Search
-          placeholder="Search comics ..."
-          allowClear
-          enterButton="Search"
-          size="large"
-          onSearch={onSearch}
-        />
-      </header>
+      <Search
+        {...{
+          title: 'Comics',
+          comicsCount: comicsCount,
+          onSearch: onSearch
+        }}
+      ></Search>
+
       {!loading && comics.length ? (
         <CardList
           {...{ cards: cutComicsInfo(comics), loading: loading }}
