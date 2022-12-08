@@ -8,6 +8,7 @@ const { Search } = Input;
 import CardList from '../../components/Card/CardList';
 
 import styles from './Charactrers.module.css';
+import { characterType } from 'types/comics';
 
 const onSearch = (value: string) => console.log(value);
 

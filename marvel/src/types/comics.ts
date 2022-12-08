@@ -86,6 +86,23 @@ type events = {
   returned: number;
 };
 
+type comics = {
+  available: number;
+  collectionURI: string;
+  items: {
+    resourceURI: string;
+    name: string;
+  }[];
+  returned: number;
+};
+
+type serials = {
+  available: number;
+  collectionURI: string;
+  items: serial[];
+  returned: number;
+};
+
 export type comicType = {
   id: number;
   digitalId: number;
@@ -116,4 +133,18 @@ export type comicType = {
   characters: characters;
   stories: stories;
   events: events;
+};
+
+export type characterType = {
+  id: number;
+  name: string;
+  description: string;
+  modified: string;
+  thumbnail: thumbnail;
+  resourceURI: string;
+  comics: comics;
+  series: serials;
+  stories: stories;
+  events: events;
+  urls: url[];
 };
