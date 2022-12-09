@@ -103,6 +103,11 @@ type serials = {
   returned: number;
 };
 
+type SeriesSummary = {
+  resourceURI: string;
+  name: string;
+}
+
 export type comicType = {
   id: number;
   digitalId: number;
@@ -147,4 +152,25 @@ export type characterType = {
   stories: stories;
   events: events;
   urls: url[];
+};
+
+export type serialType = {
+  id: number;
+  title: string;
+  description: string | null;
+  resourceURI: string;
+  urls: url[];
+  startYear: number;
+  endYear: number;
+  rating: string;
+  type: string;
+  modified: string;
+  thumbnail: thumbnail;
+  comics: comics;
+  stories: stories;
+  events: events;
+  characters: characters;
+  creators: creators;
+  next: SeriesSummary | null;
+  previous: SeriesSummary | null;
 };

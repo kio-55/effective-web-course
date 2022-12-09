@@ -3,20 +3,20 @@ import { observable, action, makeObservable, runInAction } from 'mobx';
 
 import api from '../api';
 
-import { comicType } from '../types/comics';
+import { serialType } from '../types/comics';
 
-class ComicsStore {
+class SeriesStore {
   @observable
-  comics: comicType[] = [];
-
-  @observable
-  comic: comicType | undefined;
+  series: serialType[] = [];
 
   @observable
-  comicsCount: number = 0;
+  serial: serialType | undefined;
 
   @observable
-  comicsCurentSlide: number = 0;
+  seriesCount: number = 0;
+
+  @observable
+  seriesCurrentSlide: number = 0;
 
   @observable
   loading: boolean = false;
@@ -32,14 +32,14 @@ class ComicsStore {
   }
 
   @action
-  getComicsList = async (): Promise<void> => {
+  getSeriesList = async (): Promise<void> => {
     try {
       this.loading = true;
 
-      const comics = await api.comics.getComicsList(this.limit);
+      const series = await api.series.getSeriesList(this.limit);
       runInAction(() => {
-        this.comicsCount = comics.totalCount;
-        this.comics = comics.comics;
+        this.seriesCount = series.totalCount;
+        this.series = series.serials;
         this.error = 'success';
       });
     } catch (error) {
@@ -55,14 +55,14 @@ class ComicsStore {
   };
 
   @action
-  getComicsById = async (id: string): Promise<void> => {
+  getSeriesById = async (id: string): Promise<void> => {
     try {
       this.loading = true;
-      this.comic = undefined;
+      this.serial = undefined;
 
-      const comic = await api.comics.getComicsById(id, this.limit);
+      const serial = await api.series.getSeriesById(id, this.limit);
       runInAction(() => {
-        this.comic = comic;
+        this.serial = serial;
         this.error = 'success';
       });
     } catch (error) {
@@ -78,13 +78,13 @@ class ComicsStore {
   };
 
   @action
-  getComicsWithOffset = async (offset: number): Promise<void> => {
+  getSeriesWithOffset = async (offset: number): Promise<void> => {
     try {
       this.loading = true;
-      const comics = await api.comics.getComicsWithOffset(offset, this.limit);
+      const series = await api.series.getSeriesWithOffset(offset, this.limit);
       runInAction(() => {
-        this.comicsCurentSlide = offset;
-        this.comics = comics;
+        this.seriesCurrentSlide = offset;
+        this.series = series;
         this.error = 'success';
       });
     } catch (error) {
@@ -100,18 +100,18 @@ class ComicsStore {
   };
 
   @action
-  getComicsWithName = async (offset: number, title: string): Promise<void> => {
+  getSeriesWithName = async (offset: number, title: string): Promise<void> => {
     try {
       this.loading = true;
-      const comics = await api.comics.getComicsByName(
+      const series = await api.series.getSeriesByName(
         offset,
         title,
         this.limit
       );
       runInAction(() => {
-        this.comicsCurentSlide = offset;
-        this.comics = comics.comics;
-        this.comicsCount = comics.totalCount;
+        this.seriesCurrentSlide = offset;
+        this.series = series.serials;
+        this.seriesCount = series.totalCount;
         this.error = 'success';
       });
     } catch (error) {
@@ -127,6 +127,6 @@ class ComicsStore {
   };
 }
 
-const comicsStore = new ComicsStore();
+const seriesStore = new SeriesStore();
 
-export default comicsStore;
+export default seriesStore;

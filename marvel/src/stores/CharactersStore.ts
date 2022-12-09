@@ -1,22 +1,22 @@
-import { ResultStatusType } from 'types/helpers';
 import { observable, action, makeObservable, runInAction } from 'mobx';
 
 import api from '../api';
 
-import { comicType } from '../types/comics';
+import { characterType } from '../types/comics';
+import { ResultStatusType } from 'types/helpers';
 
-class ComicsStore {
+class CharactersStore {
   @observable
-  comics: comicType[] = [];
-
-  @observable
-  comic: comicType | undefined;
+  characters: characterType[] = [];
 
   @observable
-  comicsCount: number = 0;
+  character: characterType | undefined;
 
   @observable
-  comicsCurentSlide: number = 0;
+  charactersCount: number = 0;
+
+  @observable
+  charactersCurentSlide: number = 0;
 
   @observable
   loading: boolean = false;
@@ -32,14 +32,14 @@ class ComicsStore {
   }
 
   @action
-  getComicsList = async (): Promise<void> => {
+  getCharactersList = async (): Promise<void> => {
     try {
       this.loading = true;
 
-      const comics = await api.comics.getComicsList(this.limit);
+      const characters = await api.characters.getCharactersList(this.limit);
       runInAction(() => {
-        this.comicsCount = comics.totalCount;
-        this.comics = comics.comics;
+        this.charactersCount = characters.totalCount;
+        this.characters = characters.characters;
         this.error = 'success';
       });
     } catch (error) {
@@ -55,14 +55,39 @@ class ComicsStore {
   };
 
   @action
-  getComicsById = async (id: string): Promise<void> => {
+  getCharacterById = async (id: string): Promise<void> => {
     try {
       this.loading = true;
-      this.comic = undefined;
+      this.character = undefined;
 
-      const comic = await api.comics.getComicsById(id, this.limit);
+      const character = await api.characters.getCharacterById(id, this.limit);
       runInAction(() => {
-        this.comic = comic;
+        this.character = character;
+        this.error = 'success';
+      });
+    } catch (error) {
+      runInAction(() => {
+        this.error = 'error';
+      });
+      console.error(error);
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
+  getCharactersWithOffset = async (offset: number): Promise<void> => {
+    try {
+      this.loading = true;
+      const characters = await api.characters.getCharactersWithOffset(
+        offset,
+        this.limit
+      );
+      runInAction(() => {
+        this.charactersCurentSlide = offset;
+        this.characters = characters;
         this.error = 'success';
       });
     } catch (error) {
@@ -78,40 +103,21 @@ class ComicsStore {
   };
 
   @action
-  getComicsWithOffset = async (offset: number): Promise<void> => {
+  getCharactersWithName = async (
+    offset: number,
+    title: string
+  ): Promise<void> => {
     try {
       this.loading = true;
-      const comics = await api.comics.getComicsWithOffset(offset, this.limit);
-      runInAction(() => {
-        this.comicsCurentSlide = offset;
-        this.comics = comics;
-        this.error = 'success';
-      });
-    } catch (error) {
-      console.error(error);
-      runInAction(() => {
-        this.error = 'error';
-      });
-    } finally {
-      runInAction(() => {
-        this.loading = false;
-      });
-    }
-  };
-
-  @action
-  getComicsWithName = async (offset: number, title: string): Promise<void> => {
-    try {
-      this.loading = true;
-      const comics = await api.comics.getComicsByName(
+      const characters = await api.characters.getCharactersByName(
         offset,
         title,
         this.limit
       );
       runInAction(() => {
-        this.comicsCurentSlide = offset;
-        this.comics = comics.comics;
-        this.comicsCount = comics.totalCount;
+        this.charactersCurentSlide = offset;
+        this.characters = characters.characters;
+        this.charactersCount = characters.totalCount;
         this.error = 'success';
       });
     } catch (error) {
@@ -127,6 +133,6 @@ class ComicsStore {
   };
 }
 
-const comicsStore = new ComicsStore();
+const charactersStore = new CharactersStore();
 
-export default comicsStore;
+export default charactersStore;

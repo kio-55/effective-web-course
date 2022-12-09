@@ -1,13 +1,13 @@
 import { observer } from 'mobx-react-lite';
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import comicsStore from 'stores/ComicsStore';
+import Error from 'components/Error/Error';
 
 import styles from './ComicsFullPage.module.css';
 
 const ComicsFullPage: React.FC = () => {
-  const { comic, loading } = comicsStore;
+  const { comic, loading, error } = comicsStore;
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -20,6 +20,10 @@ const ComicsFullPage: React.FC = () => {
       comicsStore.getComicsById(id);
     }
   }, []);
+
+  if (error != 'success') {
+    return <Error {...{ error }}></Error>;
+  }
 
   return loading || !comic ? (
     <>

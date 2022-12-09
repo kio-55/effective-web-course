@@ -3,6 +3,7 @@ import { CardTypes } from '../../types/card';
 import { observer } from 'mobx-react-lite';
 import { Pagination } from 'antd';
 import Search from 'components/Search/Search';
+import Error from 'components/Error/Error';
 
 import comicsStore from 'stores/ComicsStore';
 
@@ -23,7 +24,7 @@ const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
 };
 
 const Comics: React.FC = () => {
-  const { comics, loading, comicsCount, comicsCurentSlide, limit } =
+  const { comics, loading, comicsCount, comicsCurentSlide, limit, error } =
     comicsStore;
 
   const [searchedValue, setSearch] = useState('');
@@ -40,6 +41,10 @@ const Comics: React.FC = () => {
   useEffect(() => {
     comicsStore.getComicsList();
   }, []);
+
+  if (error != 'success') {
+    return <Error {...{ error }}></Error>;
+  }
 
   return (
     <div>
