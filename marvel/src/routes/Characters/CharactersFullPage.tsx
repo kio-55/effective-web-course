@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate, useParams } from 'react-router-dom';
-
-import characters from '../../mocks/characters.json';
-import type { FullCharacterCard } from '../../types/card';
-
+import { observer } from 'mobx-react-lite';
+import React, { useEffect } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import charactersStore from 'stores/CharactersStore';
 import styles from './CharacterFullPage.module.css';
+import Error from 'components/Error/Error';
 
 const CharactersFullPage: React.FC = () => {
-  const [character, setCharacter] = useState<FullCharacterCard>();
+  const { character, loading, error } = charactersStore;
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -17,44 +15,43 @@ const CharactersFullPage: React.FC = () => {
   };
 
   useEffect(() => {
-    const result = characters.filter((element) => {
-      return element.id === Number(id);
-    });
-    if (result.length) {
-      setCharacter({
-        id: result[0].id,
-        imageUrl:
-          result[0].thumbnail.path + '.' + result[0].thumbnail.extension,
-        title: result[0].name,
-        description: result[0].description,
-        comics: result[0].comics.items,
-        series: result[0].series.items
-      });
+    if (id) {
+      charactersStore.getCharacterById(id);
     }
   }, []);
 
-  if (!character) {
-    return (
-      <>
-        <h1 className={styles.title}>Cant find hero...</h1>
-        <button className={styles.button} onClick={handleGoBack}>
-          go back
-        </button>
-      </>
-    );
+  if (error != 'success') {
+    return <Error {...{ error }}></Error>;
   }
 
-  return (
+  return loading || !character ? (
+    <>
+      {loading && !character ? (
+        <h1>Loading...</h1>
+      ) : (
+        <>
+          <h1>Can't find character with same id</h1>
+          <button className={styles.button} onClick={handleGoBack}>
+            go back
+          </button>
+        </>
+      )}
+    </>
+  ) : (
     <div className={styles.page}>
-      <img className={styles.image} src={character.imageUrl} alt="" />
+      <img
+        className={styles.image}
+        src={character.thumbnail.path + '.' + character.thumbnail.extension}
+        alt=""
+      />
       <div className={styles.content}>
         <div>
-          <h1 className={styles.title}>{character.title}</h1>
+          <h1 className={styles.title}>{character.name}</h1>
           <p>{character.description}</p>
         </div>
         <div className={styles.list}>
           <h1 className={styles.title}>Comics</h1>
-          {character.comics.map((comics) => {
+          {character.comics.items.map((comics) => {
             return (
               <Link
                 key={comics.resourceURI}
@@ -73,7 +70,7 @@ const CharactersFullPage: React.FC = () => {
         </div>
         <div className={styles.list}>
           <h1 className={styles.title}>Series</h1>
-          {character.series.map((series) => {
+          {character.series.items.map((series) => {
             return (
               <Link
                 key={series.resourceURI}
@@ -98,4 +95,4 @@ const CharactersFullPage: React.FC = () => {
   );
 };
 
-export default CharactersFullPage;
+export default observer(CharactersFullPage);

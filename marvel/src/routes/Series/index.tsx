@@ -1,53 +1,82 @@
 import React, { useEffect, useState } from 'react';
 import { CardTypes } from '../../types/card';
-
-import styles from './Series.module.css';
-import seriesJSON from '../../mocks/series.json';
+import { observer } from 'mobx-react-lite';
+import { Pagination } from 'antd';
+import Search from 'components/Search/Search';
+import seriesStore from 'stores/SeriesStore';
 import CardList from '../../components/Card/CardList';
+import { serialType } from 'types/comics';
+import Error from 'components/Error/Error';
 
-import { Input } from 'antd';
-
-const { Search } = Input;
-
-const onSearch = (value: string) => console.log(value);
-
-const Series: React.FC = () => {
-  const [seriesList, setSeries] = useState<CardTypes[]>();
-
-  useEffect(() => {
-    const series: CardTypes[] = [];
-    seriesJSON.map((item) => {
-      series.push({
-        id: item.id,
-        imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
-        description: item.description || '',
-        title: item.title
-      });
+const cutSeriesInfo = (seriesArr: serialType[]): CardTypes[] => {
+  const series: CardTypes[] = [];
+  seriesArr.map((item) => {
+    series.push({
+      id: item.id,
+      imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
+      description: item.description ? item.description : 'No description yet!',
+      title: item.title
     });
-    setSeries(series);
-  }, []);
-  if (seriesList) {
-    return (
-      <div>
-        <header className={styles.header}>
-          <div className={styles.title}>
-            <h1 className={styles.title__text}>Characters</h1>
-            <span className={styles.title__counter}>({seriesList.length})</span>
-          </div>
-          <Search
-            placeholder="Search hero ..."
-            allowClear
-            enterButton="Search"
-            size="large"
-            onSearch={onSearch}
-          />
-        </header>
-        <CardList {...seriesList}></CardList>
-      </div>
-    );
-  } else {
-    return <></>;
-  }
+  });
+  return series;
 };
 
-export default Series;
+const Series: React.FC = () => {
+  const { series, loading, seriesCount, seriesCurrentSlide, limit, error } =
+    seriesStore;
+
+  const [searchedValue, setSearch] = useState('');
+
+  useEffect(() => {
+    seriesStore.getSeriesList();
+  }, []);
+
+  const onSearch = (value: string) => {
+    if (value) {
+      seriesStore.getSeriesWithName(0, value);
+      setSearch(value);
+    } else {
+      seriesStore.getSeriesList();
+    }
+  };
+
+  if (error != 'success') {
+    return <Error {...{ error }}></Error>;
+  }
+
+  return (
+    <div>
+      <Search
+        {...{
+          title: 'Series',
+          comicsCount: seriesCount,
+          onSearch: onSearch
+        }}
+      ></Search>
+
+      {!loading && series.length ? (
+        <CardList
+          {...{ cards: cutSeriesInfo(series), loading: loading }}
+        ></CardList>
+      ) : (
+        <CardList
+          {...{ cards: cutSeriesInfo(series), loading: true }}
+        ></CardList>
+      )}
+      <Pagination
+        simple
+        pageSize={limit}
+        total={seriesCount}
+        current={(seriesCurrentSlide + limit) / limit}
+        onChange={(page) => {
+          const offset = (page - 1) * limit;
+          return searchedValue
+            ? seriesStore.getSeriesWithName(offset, searchedValue)
+            : seriesStore.getSeriesWithOffset(offset);
+        }}
+      />
+    </div>
+  );
+};
+
+export default observer(Series);
