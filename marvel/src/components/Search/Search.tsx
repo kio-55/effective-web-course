@@ -28,12 +28,10 @@ const Search: React.FC<SearchPropsType> = ({
         <h1 className={styles.title__text}>{title}</h1>
         <span className={styles.title__counter}>({comicsCount})</span>
       </div>
-      <Input.Search
+      <Input
         placeholder="Search comics ..."
         allowClear
-        enterButton="Search"
         size="large"
-        onSearch={onSearch}
         onChange={onChange}
       />
     </header>
