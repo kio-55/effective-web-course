@@ -7,6 +7,7 @@ import seriesStore from 'stores/SeriesStore';
 import CardList from '../../components/Card/CardList';
 import { serialType } from 'types/comics';
 import Error from 'components/Error/Error';
+import { useTranslation } from 'react-i18next';
 
 const cutSeriesInfo = (seriesArr: serialType[]): CardTypes[] => {
   const series: CardTypes[] = [];
@@ -24,6 +25,7 @@ const cutSeriesInfo = (seriesArr: serialType[]): CardTypes[] => {
 const Series: React.FC = () => {
   const { series, loading, seriesCount, seriesCurrentSlide, limit, error } =
     seriesStore;
+  const { t } = useTranslation();
 
   const [searchedValue, setSearch] = useState('');
 
@@ -44,11 +46,13 @@ const Series: React.FC = () => {
     return <Error {...{ error }}></Error>;
   }
 
+  const title: string = t('series__title');
+
   return (
     <div>
       <Search
         {...{
-          title: 'Series',
+          title: title,
           comicsCount: seriesCount,
           onSearch: onSearch
         }}

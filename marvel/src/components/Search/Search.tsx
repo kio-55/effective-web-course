@@ -3,6 +3,7 @@ import { Input } from 'antd';
 import debounce from 'lodash.debounce';
 
 import styles from './Search.module.css';
+import { useTranslation } from 'react-i18next';
 
 type SearchPropsType = {
   title: string;
@@ -15,6 +16,7 @@ const Search: React.FC<SearchPropsType> = ({
   comicsCount,
   onSearch
 }) => {
+  const { t } = useTranslation();
   const onChange = React.useCallback(
     debounce((event: ChangeEvent<HTMLInputElement>) => {
       onSearch(event.target.value);
@@ -29,7 +31,7 @@ const Search: React.FC<SearchPropsType> = ({
         <span className={styles.title__counter}>({comicsCount})</span>
       </div>
       <Input
-        placeholder="Search comics ..."
+        placeholder={t('search') || 'Search'}
         allowClear
         size="large"
         onChange={onChange}

@@ -9,6 +9,7 @@ import comicsStore from 'stores/ComicsStore';
 
 import CardList from '../../components/Card/CardList';
 import { comicType } from 'types/comics';
+import { useTranslation } from 'react-i18next';
 
 const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
   const comics: CardTypes[] = [];
@@ -26,6 +27,8 @@ const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
 const Comics: React.FC = () => {
   const { comics, loading, comicsCount, comicsCurentSlide, limit, error } =
     comicsStore;
+
+  const { t } = useTranslation();
 
   const [searchedValue, setSearch] = useState('');
 
@@ -46,11 +49,13 @@ const Comics: React.FC = () => {
     return <Error {...{ error }}></Error>;
   }
 
+  const title: string = t('comics_title');
+
   return (
     <div>
       <Search
         {...{
-          title: 'Comics',
+          title: title,
           comicsCount: comicsCount,
           onSearch: onSearch
         }}

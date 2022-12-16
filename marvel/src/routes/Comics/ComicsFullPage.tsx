@@ -5,11 +5,13 @@ import comicsStore from 'stores/ComicsStore';
 import Error from 'components/Error/Error';
 
 import styles from './ComicsFullPage.module.css';
+import { useTranslation } from 'react-i18next';
 
 const ComicsFullPage: React.FC = () => {
   const { comic, loading, error } = comicsStore;
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleGoBack = () => {
     navigate(-1);
@@ -28,12 +30,12 @@ const ComicsFullPage: React.FC = () => {
   return loading || !comic ? (
     <>
       {loading && !comic ? (
-        <h1>Loading...</h1>
+        <h1>{t('loading')}</h1>
       ) : (
         <>
-          <h1>Can't find comics with same id</h1>
+          <h1>{t('error')}</h1>
           <button className={styles.button} onClick={handleGoBack}>
-            go back
+            {t('back')}
           </button>
         </>
       )}
@@ -52,7 +54,7 @@ const ComicsFullPage: React.FC = () => {
             <p>{comic.description}</p>
           </div>
           <div className={styles.list}>
-            <h1 className={styles.title}>Characters</h1>
+            <h1 className={styles.title}>{t('characters_title')}</h1>
             {comic.characters.items.map((character) => {
               return (
                 <Link
@@ -71,7 +73,7 @@ const ComicsFullPage: React.FC = () => {
             })}
           </div>
           <div className={styles.list}>
-            <h1 className={styles.title}>Series</h1>
+            <h1 className={styles.title}>{t('series__title')}</h1>
             <Link
               key={comic.series.resourceURI}
               to={
@@ -87,7 +89,7 @@ const ComicsFullPage: React.FC = () => {
           </div>
         </div>
         <button className={styles.button} onClick={handleGoBack}>
-          go back
+          {t('back')}
         </button>
       </div>
     </>

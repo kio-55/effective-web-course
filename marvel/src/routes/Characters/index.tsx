@@ -9,6 +9,7 @@ import charactersStore from 'stores/CharactersStore';
 
 import CardList from '../../components/Card/CardList';
 import { characterType } from 'types/comics';
+import { useTranslation } from 'react-i18next';
 
 const cutCharactersInfo = (charactersArr: characterType[]): CardTypes[] => {
   const characters: CardTypes[] = [];
@@ -33,6 +34,8 @@ const Characters: React.FC = () => {
     error
   } = charactersStore;
 
+  const { t } = useTranslation();
+
   const [searchedValue, setSearch] = useState('');
 
   const onSearch = (value: string) => {
@@ -52,11 +55,13 @@ const Characters: React.FC = () => {
     return <Error {...{ error }}></Error>;
   }
 
+  const title: string = t('characters_title');
+
   return (
     <div>
       <Search
         {...{
-          title: 'Characters',
+          title: title,
           comicsCount: charactersCount,
           onSearch: onSearch
         }}
