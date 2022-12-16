@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import { Input } from 'antd';
+import debounce from 'lodash.debounce';
 
 import styles from './Search.module.css';
 
@@ -14,6 +15,13 @@ const Search: React.FC<SearchPropsType> = ({
   comicsCount,
   onSearch
 }) => {
+  const onChange = React.useCallback(
+    debounce((event: ChangeEvent<HTMLInputElement>) => {
+      onSearch(event.target.value);
+    }, 3000),
+    []
+  );
+
   return (
     <header className={styles.header}>
       <div className={styles.title}>
@@ -26,6 +34,7 @@ const Search: React.FC<SearchPropsType> = ({
         enterButton="Search"
         size="large"
         onSearch={onSearch}
+        onChange={onChange}
       />
     </header>
   );
