@@ -11,11 +11,12 @@ const CardItem: React.FC<CardTypes> = ({
   title,
   description
 }) => {
-  const location = useLocation();
+  const loacation = useLocation();
+  const path = loacation.pathname == '/' ? '/characters' : loacation.pathname;
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`${location.pathname}/${id}`);
+    navigate(`${path}/${id}`);
   };
 
   return (
