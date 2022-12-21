@@ -58,6 +58,14 @@ const Header: React.FC = () => {
         >
           {t('series__title')}
         </NavLink>
+        <NavLink
+          to="/favourites"
+          className={({ isActive }) =>
+            isActive ? styles.link + ' ' + styles.active : styles.link
+          }
+        >
+          {t('favourites')}
+        </NavLink>
       </nav>
     </header>
   );

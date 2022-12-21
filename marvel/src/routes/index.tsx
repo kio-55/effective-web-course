@@ -8,6 +8,7 @@ import Series from './Series';
 import CharactersFullPage from './Characters/CharactersFullPage';
 import ComicsFullPage from './Comics/ComicsFullPage';
 import SeriesFullPage from './Series/SeriesFullPage';
+import Favourites from './Favourites';
 
 const routes: RouteObject[] = [
   {
@@ -35,6 +36,10 @@ const routes: RouteObject[] = [
           { index: true, element: <Series /> },
           { path: '/series/:id', element: <SeriesFullPage /> }
         ]
+      },
+      {
+        path: '/favourites',
+        children: [{ index: true, element: <Favourites /> }]
       },
       { path: '*', element: <NoMatch /> }
     ]

@@ -78,6 +78,35 @@ class SeriesStore {
   };
 
   @action
+  getSeriesListByIds = async (ids: string[]): Promise<void> => {
+    try {
+      this.loading = true;
+
+      const series: serialType[] = [];
+      console.log(ids);
+      for (const id in ids) {
+        const serial = await api.series.getSeriesById(ids[id], this.limit);
+        series.push(serial);
+      }
+
+      runInAction(() => {
+        this.seriesCount = series.length;
+        this.series = series;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
   getSeriesWithOffset = async (offset: number): Promise<void> => {
     try {
       this.loading = true;

@@ -16,7 +16,8 @@ const cutSeriesInfo = (seriesArr: serialType[]): CardTypes[] => {
       id: item.id,
       imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
       description: item.description ? item.description : 'No description yet!',
-      title: item.title
+      title: item.title,
+      page: 'series'
     });
   });
   return series;

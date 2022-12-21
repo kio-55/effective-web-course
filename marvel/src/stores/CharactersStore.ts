@@ -55,6 +55,38 @@ class CharactersStore {
   };
 
   @action
+  getCharactersListByIds = async (ids: string[]): Promise<void> => {
+    try {
+      this.loading = true;
+
+      const characters: characterType[] = [];
+      console.log(ids);
+      for (const id in ids) {
+        const character = await api.characters.getCharacterById(
+          ids[id],
+          this.limit
+        );
+        characters.push(character);
+      }
+
+      runInAction(() => {
+        this.charactersCount = characters.length;
+        this.characters = characters;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
   getCharacterById = async (id: string): Promise<void> => {
     try {
       this.loading = true;

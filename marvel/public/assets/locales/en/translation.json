@@ -10,5 +10,6 @@
   "error": "Sorry, something went wrong.",
   "loading": "Loading...",
   "back": "go back",
-  "page_not_found": "Page not found 😞"
+  "page_not_found": "Page not found 😞",
+  "favourites": "Favourites"
 }

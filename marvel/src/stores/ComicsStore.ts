@@ -78,6 +78,35 @@ class ComicsStore {
   };
 
   @action
+  getComicsListByIds = async (ids: string[]): Promise<void> => {
+    try {
+      this.loading = true;
+
+      const comics: comicType[] = [];
+      console.log(ids);
+      for (const id in ids) {
+        const comic = await api.comics.getComicsById(ids[id], this.limit);
+        comics.push(comic);
+      }
+
+      runInAction(() => {
+        this.comicsCount = comics.length;
+        this.comics = comics;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
   getComicsWithOffset = async (offset: number): Promise<void> => {
     try {
       this.loading = true;

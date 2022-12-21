@@ -18,7 +18,8 @@ const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
       id: item.id,
       imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
       description: item.description,
-      title: item.title
+      title: item.title,
+      page: 'comics'
     });
   });
   return comics;
