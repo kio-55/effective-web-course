@@ -1,4 +1,5 @@
 import type { RouteObject } from 'react-router-dom';
+import React from 'react';
 
 import Layout from '../layouts/Layout';
 import NoMatch from './NoMatch';

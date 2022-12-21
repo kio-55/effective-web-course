@@ -6,17 +6,17 @@ export type CardTypes = {
   page: 'comics' | 'characters' | 'series';
 };
 
-type comics = {
+type Comics = {
   resourceURI: string;
   name: string;
 };
 
-type series = {
+type Series = {
   resourceURI: string;
   name: string;
 };
 
-type character = {
+type Character = {
   resourceURI: string;
   name: string;
 };
@@ -26,8 +26,8 @@ export type FullCharacterCard = {
   imageUrl: string;
   title: string;
   description: string;
-  comics: comics[];
-  series: series[];
+  comics: Comics[];
+  series: Series[];
 };
 
 export type FullComicsPage = {
@@ -35,8 +35,8 @@ export type FullComicsPage = {
   imageUrl: string;
   title: string;
   description: string;
-  characters: character[];
-  series: series;
+  characters: Character[];
+  series: Series;
 };
 
 export type FullSeriesPage = {
@@ -44,6 +44,6 @@ export type FullSeriesPage = {
   imageUrl: string;
   title: string;
   description: string;
-  characters: character[];
-  comics: comics[];
+  characters: Character[];
+  comics: Comics[];
 };

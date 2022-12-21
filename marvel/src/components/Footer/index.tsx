@@ -13,12 +13,14 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <img className={styles.logo} src={logo} alt="Marvel logo" />
       <h2 className={styles.title}>
-        {t('data_provided')} {currYear.currYear} MARVEL
+        {t('data_provided')}
+        {currYear.currYear} MARVEL
       </h2>
       <a
         className={styles.link}
         href="http://developer.marvel.com"
         target="_blank"
+        rel="noreferrer"
       >
         developer.marvel.com
       </a>

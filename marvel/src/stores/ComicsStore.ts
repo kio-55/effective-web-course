@@ -3,14 +3,14 @@ import { observable, action, makeObservable, runInAction } from 'mobx';
 
 import api from '../api';
 
-import { comicType } from '../types/comics';
+import { ComicType } from '../types/comics';
 
 class ComicsStore {
   @observable
-  comics: comicType[] = [];
+  comics: ComicType[] = [];
 
   @observable
-  comic: comicType | undefined;
+  comic: ComicType | undefined;
 
   @observable
   comicsCount: number = 0;
@@ -82,7 +82,7 @@ class ComicsStore {
     try {
       this.loading = true;
 
-      const comics: comicType[] = [];
+      const comics: ComicType[] = [];
       console.log(ids);
       for (const id in ids) {
         const comic = await api.comics.getComicsById(ids[id], this.limit);

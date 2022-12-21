@@ -5,11 +5,11 @@ import { Pagination } from 'antd';
 import Search from 'components/Search/Search';
 import seriesStore from 'stores/SeriesStore';
 import CardList from '../../components/Card/CardList';
-import { serialType } from 'types/comics';
+import { SerialType } from 'types/comics';
 import Error from 'components/Error/Error';
 import { useTranslation } from 'react-i18next';
 
-const cutSeriesInfo = (seriesArr: serialType[]): CardTypes[] => {
+const cutSeriesInfo = (seriesArr: SerialType[]): CardTypes[] => {
   const series: CardTypes[] = [];
   seriesArr.map((item) => {
     series.push({

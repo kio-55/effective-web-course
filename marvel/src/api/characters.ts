@@ -1,9 +1,9 @@
 import axios from './helpers/axios';
 
-import type { characterType } from '../types/comics';
+import type { CharacterType } from '../types/comics';
 
 type ReturnedType = {
-  characters: characterType[];
+  characters: CharacterType[];
   totalCount: number;
 };
 
@@ -18,7 +18,7 @@ export default {
       totalCount: response.data.data.total
     };
   },
-  async getCharacterById(id: string, limit: number): Promise<characterType> {
+  async getCharacterById(id: string, limit: number): Promise<CharacterType> {
     const params = {
       limit
     };
@@ -28,7 +28,7 @@ export default {
   async getCharactersWithOffset(
     offset: number,
     limit: number
-  ): Promise<characterType[]> {
+  ): Promise<CharacterType[]> {
     const params = {
       limit,
       offset

@@ -8,10 +8,10 @@ import Error from 'components/Error/Error';
 import comicsStore from 'stores/ComicsStore';
 
 import CardList from '../../components/Card/CardList';
-import { comicType } from 'types/comics';
+import { ComicType } from 'types/comics';
 import { useTranslation } from 'react-i18next';
 
-const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
+const cutComicsInfo = (comicsArr: ComicType[]): CardTypes[] => {
   const comics: CardTypes[] = [];
   comicsArr.map((item) => {
     comics.push({

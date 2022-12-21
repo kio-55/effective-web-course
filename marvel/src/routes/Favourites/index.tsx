@@ -6,10 +6,10 @@ import charactersStore from 'stores/CharactersStore';
 import comicsStore from 'stores/ComicsStore';
 import seriesStore from 'stores/SeriesStore';
 import { CardTypes } from 'types/card';
-import { characterType, comicType, serialType } from 'types/comics';
+import { CharacterType, ComicType, SerialType } from 'types/comics';
 import styles from './Favourites.module.css';
 
-const cutCharactersInfo = (charactersArr: characterType[]): CardTypes[] => {
+const cutCharactersInfo = (charactersArr: CharacterType[]): CardTypes[] => {
   const characters: CardTypes[] = [];
   charactersArr.map((item) => {
     characters.push({
@@ -23,7 +23,7 @@ const cutCharactersInfo = (charactersArr: characterType[]): CardTypes[] => {
   return characters;
 };
 
-const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
+const cutComicsInfo = (comicsArr: ComicType[]): CardTypes[] => {
   const comics: CardTypes[] = [];
   comicsArr.map((item) => {
     comics.push({
@@ -37,7 +37,7 @@ const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
   return comics;
 };
 
-const cutSeriesInfo = (seriesArr: serialType[]): CardTypes[] => {
+const cutSeriesInfo = (seriesArr: SerialType[]): CardTypes[] => {
   const series: CardTypes[] = [];
   seriesArr.map((item) => {
     series.push({
