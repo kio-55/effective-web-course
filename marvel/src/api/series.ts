@@ -1,9 +1,9 @@
 import axios from './helpers/axios';
 
-import type { serialType } from '../types/comics';
+import type { SerialType } from '../types/comics';
 
 type ReturnedType = {
-  serials: serialType[];
+  serials: SerialType[];
   totalCount: number;
 };
 
@@ -18,7 +18,7 @@ export default {
       totalCount: response.data.data.total
     };
   },
-  async getSeriesById(id: string, limit: number): Promise<serialType> {
+  async getSeriesById(id: string, limit: number): Promise<SerialType> {
     const params = {
       limit
     };
@@ -28,7 +28,7 @@ export default {
   async getSeriesWithOffset(
     offset: number,
     limit: number
-  ): Promise<serialType[]> {
+  ): Promise<SerialType[]> {
     const params = {
       limit,
       offset

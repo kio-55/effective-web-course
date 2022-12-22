@@ -1,5 +1,5 @@
 .header {
-  background-color: #1890ff;
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,7 +14,7 @@
 
 .link {
   text-decoration: none;
-  color: #fff;
+  color: var(--contrast-text-color);
   font-size: 25px;
   text-transform: uppercase;
   position: relative;
@@ -27,14 +27,14 @@
 }
 
 .active {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--contrast-text-color);
 }
 
 .link::before {
   content: '';
   width: 100%;
   transform: translateX(-100%);
-  background-color: #fff;
+  background-color: var(--contrast-text-color);
   position: absolute;
   height: 2px;
   bottom: 0;

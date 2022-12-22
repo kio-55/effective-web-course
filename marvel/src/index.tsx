@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import './index.css';
+import './globals/index.css';
 import App from './App';
+import './config/i18n';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Suspense>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Suspense>
 );

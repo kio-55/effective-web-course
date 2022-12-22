@@ -1,50 +1,50 @@
-type textObject = {
+type TextObject = {
   type: string;
   language: string;
   text: string;
 };
 
-type url = {
+type URL = {
   type: string;
   url: string;
 };
 
-type serial = {
+type Serial = {
   resourceURI: string;
   name: string;
 };
 
-type variant = {
+type Variant = {
   resourceURI: string;
   name: string;
 };
 
-type collection = {
+type Collection = {
   resourceURI: string;
   name: string;
 };
 
-type date = {
+type Date = {
   type: string;
   date: string;
 };
 
-type prices = {
+type Prices = {
   type: string;
   price: number;
 };
 
-type thumbnail = {
+type Thumbnail = {
   path: string;
   extension: string;
 };
 
-type image = {
+type Image = {
   path: string;
   extension: string;
 };
 
-type creators = {
+type Creators = {
   available: number;
   collectionURI: string;
   items: {
@@ -55,7 +55,7 @@ type creators = {
   returned: number;
 };
 
-type characters = {
+type Characters = {
   available: number;
   collectionURI: string;
   items: {
@@ -65,7 +65,7 @@ type characters = {
   returned: number;
 };
 
-type stories = {
+type Stories = {
   available: number;
   collectionURI: string;
   items: {
@@ -76,7 +76,7 @@ type stories = {
   returned: number;
 };
 
-type events = {
+type Events = {
   available: number;
   collectionURI: string;
   items: {
@@ -86,7 +86,7 @@ type events = {
   returned: number;
 };
 
-type comics = {
+type Comics = {
   available: number;
   collectionURI: string;
   items: {
@@ -96,19 +96,19 @@ type comics = {
   returned: number;
 };
 
-type serials = {
+type Serials = {
   available: number;
   collectionURI: string;
-  items: serial[];
+  items: Serial[];
   returned: number;
 };
 
 type SeriesSummary = {
   resourceURI: string;
   name: string;
-}
+};
 
-export type comicType = {
+export type ComicType = {
   id: number;
   digitalId: number;
   title: string;
@@ -123,54 +123,54 @@ export type comicType = {
   issn: string;
   format: string;
   pageCount: number;
-  textObjects: textObject[];
+  textObjects: TextObject[];
   resourceURI: string;
-  urls: url[];
-  series: serial;
-  variants: variant[];
-  collections: collection[];
-  collectedIssues: collection[];
-  dates: date[];
-  prices: prices[];
-  thumbnail: thumbnail;
-  images: image[];
-  creators: creators;
-  characters: characters;
-  stories: stories;
-  events: events;
+  urls: URL[];
+  series: Serial;
+  variants: Variant[];
+  collections: Collection[];
+  collectedIssues: Collection[];
+  dates: Date[];
+  prices: Prices[];
+  thumbnail: Thumbnail;
+  images: Image[];
+  creators: Creators;
+  characters: Characters;
+  stories: Stories;
+  events: Events;
 };
 
-export type characterType = {
+export type CharacterType = {
   id: number;
   name: string;
   description: string;
   modified: string;
-  thumbnail: thumbnail;
+  thumbnail: Thumbnail;
   resourceURI: string;
-  comics: comics;
-  series: serials;
-  stories: stories;
-  events: events;
-  urls: url[];
+  comics: Comics;
+  series: Serials;
+  stories: Stories;
+  events: Events;
+  urls: URL[];
 };
 
-export type serialType = {
+export type SerialType = {
   id: number;
   title: string;
   description: string | null;
   resourceURI: string;
-  urls: url[];
+  urls: URL[];
   startYear: number;
   endYear: number;
   rating: string;
   type: string;
   modified: string;
-  thumbnail: thumbnail;
-  comics: comics;
-  stories: stories;
-  events: events;
-  characters: characters;
-  creators: creators;
+  thumbnail: Thumbnail;
+  comics: Comics;
+  stories: Stories;
+  events: Events;
+  characters: Characters;
+  creators: Creators;
   next: SeriesSummary | null;
   previous: SeriesSummary | null;
 };

@@ -21,7 +21,9 @@
     "prettier",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "settings": {
     "import/resolver": {

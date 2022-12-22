@@ -5,3 +5,35 @@
   gap: 15px;
   justify-content: space-around;
 }
+
+.liked g g path {
+  fill: red;
+}
+
+.simple g g path {
+  fill: cornsilk;
+  stroke: red;
+}
+
+.card {
+  position: relative;
+}
+
+.simple,
+.liked {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  color: black;
+  padding: 5px;
+  border-radius: 15px;
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+  right: 5px;
+}
+
+.card:hover .simple,
+.liked {
+  display: flex;
+}

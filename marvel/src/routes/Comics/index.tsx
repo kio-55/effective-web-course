@@ -8,16 +8,18 @@ import Error from 'components/Error/Error';
 import comicsStore from 'stores/ComicsStore';
 
 import CardList from '../../components/Card/CardList';
-import { comicType } from 'types/comics';
+import { ComicType } from 'types/comics';
+import { useTranslation } from 'react-i18next';
 
-const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
+const cutComicsInfo = (comicsArr: ComicType[]): CardTypes[] => {
   const comics: CardTypes[] = [];
   comicsArr.map((item) => {
     comics.push({
       id: item.id,
       imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
       description: item.description,
-      title: item.title
+      title: item.title,
+      page: 'comics'
     });
   });
   return comics;
@@ -26,6 +28,8 @@ const cutComicsInfo = (comicsArr: comicType[]): CardTypes[] => {
 const Comics: React.FC = () => {
   const { comics, loading, comicsCount, comicsCurentSlide, limit, error } =
     comicsStore;
+
+  const { t } = useTranslation();
 
   const [searchedValue, setSearch] = useState('');
 
@@ -46,11 +50,13 @@ const Comics: React.FC = () => {
     return <Error {...{ error }}></Error>;
   }
 
+  const title: string = t('comics_title');
+
   return (
     <div>
       <Search
         {...{
-          title: 'Comics',
+          title: title,
           comicsCount: comicsCount,
           onSearch: onSearch
         }}

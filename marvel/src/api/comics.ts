@@ -1,9 +1,9 @@
 import axios from './helpers/axios';
 
-import type { comicType } from '../types/comics';
+import type { ComicType } from '../types/comics';
 
 type ReturnedType = {
-  comics: comicType[];
+  comics: ComicType[];
   totalCount: number;
 };
 
@@ -18,7 +18,7 @@ export default {
       totalCount: response.data.data.total
     };
   },
-  async getComicsById(id: string, limit: number): Promise<comicType> {
+  async getComicsById(id: string, limit: number): Promise<ComicType> {
     const params = {
       limit
     };
@@ -28,7 +28,7 @@ export default {
   async getComicsWithOffset(
     offset: number,
     limit: number
-  ): Promise<comicType[]> {
+  ): Promise<ComicType[]> {
     const params = {
       limit,
       offset

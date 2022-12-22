@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  background-color: #1890ff;
+  background-color: var(--secondary-color);
   padding-bottom: 30px;
   padding-left: 15px;
   padding-right: 15px;
@@ -16,14 +16,14 @@
 
 .title {
   font-size: 25px;
-  color: #fff;
+  color: var(--contrast-text-color);
 }
 
 .link {
   text-decoration: none;
-  color: #fff;
+  color: var(--contrast-text-color);
 }
 
 .link:hover {
-  color: gold;
+  color: var(--link-honer-color);
 }

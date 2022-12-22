@@ -1,21 +1,22 @@
 import type { RouteObject } from 'react-router-dom';
+import React from 'react';
 
 import Layout from '../layouts/Layout';
 import NoMatch from './NoMatch';
-import Home from './Home';
 import Characters from './Characters';
 import Comics from './Comics';
 import Series from './Series';
 import CharactersFullPage from './Characters/CharactersFullPage';
 import ComicsFullPage from './Comics/ComicsFullPage';
 import SeriesFullPage from './Series/SeriesFullPage';
+import Favourites from './Favourites';
 
 const routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <Characters /> },
       {
         path: '/characters',
         children: [
@@ -36,6 +37,10 @@ const routes: RouteObject[] = [
           { index: true, element: <Series /> },
           { path: '/series/:id', element: <SeriesFullPage /> }
         ]
+      },
+      {
+        path: '/favourites',
+        children: [{ index: true, element: <Favourites /> }]
       },
       { path: '*', element: <NoMatch /> }
     ]

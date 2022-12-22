@@ -2,15 +2,15 @@ import { observable, action, makeObservable, runInAction } from 'mobx';
 
 import api from '../api';
 
-import { characterType } from '../types/comics';
+import { CharacterType } from '../types/comics';
 import { ResultStatusType } from 'types/helpers';
 
 class CharactersStore {
   @observable
-  characters: characterType[] = [];
+  characters: CharacterType[] = [];
 
   @observable
-  character: characterType | undefined;
+  character: CharacterType | undefined;
 
   @observable
   charactersCount: number = 0;
@@ -40,6 +40,38 @@ class CharactersStore {
       runInAction(() => {
         this.charactersCount = characters.totalCount;
         this.characters = characters.characters;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
+  getCharactersListByIds = async (ids: string[]): Promise<void> => {
+    try {
+      this.loading = true;
+
+      const characters: CharacterType[] = [];
+      console.log(ids);
+      for (const id in ids) {
+        const character = await api.characters.getCharacterById(
+          ids[id],
+          this.limit
+        );
+        characters.push(character);
+      }
+
+      runInAction(() => {
+        this.charactersCount = characters.length;
+        this.characters = characters;
         this.error = 'success';
       });
     } catch (error) {

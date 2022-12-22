@@ -5,11 +5,13 @@ import seriesStore from 'stores/SeriesStore';
 import Error from 'components/Error/Error';
 
 import styles from './SeriesFullPage.module.css';
+import { useTranslation } from 'react-i18next';
 
 const SeriesFullPage: React.FC = () => {
   const { serial, loading, error } = seriesStore;
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleGoBack = () => {
     navigate(-1);
@@ -28,12 +30,12 @@ const SeriesFullPage: React.FC = () => {
   return loading || !serial ? (
     <>
       {loading && !serial ? (
-        <h1>Loading...</h1>
+        <h1>{t('loading')}</h1>
       ) : (
         <>
-          <h1>Can't find series with same id</h1>
+          <h1>{t('error')}</h1>
           <button className={styles.button} onClick={handleGoBack}>
-            go back
+            {t('back')}
           </button>
         </>
       )}
@@ -51,7 +53,7 @@ const SeriesFullPage: React.FC = () => {
           <p>{serial.description}</p>
         </div>
         <div className={styles.list}>
-          <h1 className={styles.title}>Comics</h1>
+          <h1 className={styles.title}>{t('comics_title')}</h1>
           {serial.comics.items.map((comics) => {
             return (
               <Link
@@ -70,7 +72,7 @@ const SeriesFullPage: React.FC = () => {
           })}
         </div>
         <div className={styles.list}>
-          <h1 className={styles.title}>Characters</h1>
+          <h1 className={styles.title}>{t('characters_title')}</h1>
           {serial.characters.items.map((character) => {
             return (
               <Link
@@ -90,7 +92,7 @@ const SeriesFullPage: React.FC = () => {
         </div>
       </div>
       <button className={styles.button} onClick={handleGoBack}>
-        go back
+        {t('back')}
       </button>
     </div>
   );

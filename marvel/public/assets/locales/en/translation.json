@@ -1,0 +1,15 @@
+{
+  "characters_title": "Сharacters",
+  "comics_title": "Comics",
+  "series__title": "Series",
+  "logo__alt": "Marvel logo",
+  "light_theme": "light",
+  "dark_theme": "dark",
+  "data_provided": "Data provided by Marvel. ©",
+  "search": "Search ...",
+  "error": "Sorry, something went wrong.",
+  "loading": "Loading...",
+  "back": "go back",
+  "page_not_found": "Page not found 😞",
+  "favourites": "Favourites"
+}

@@ -3,14 +3,14 @@ import { observable, action, makeObservable, runInAction } from 'mobx';
 
 import api from '../api';
 
-import { comicType } from '../types/comics';
+import { ComicType } from '../types/comics';
 
 class ComicsStore {
   @observable
-  comics: comicType[] = [];
+  comics: ComicType[] = [];
 
   @observable
-  comic: comicType | undefined;
+  comic: ComicType | undefined;
 
   @observable
   comicsCount: number = 0;
@@ -63,6 +63,35 @@ class ComicsStore {
       const comic = await api.comics.getComicsById(id, this.limit);
       runInAction(() => {
         this.comic = comic;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
+  getComicsListByIds = async (ids: string[]): Promise<void> => {
+    try {
+      this.loading = true;
+
+      const comics: ComicType[] = [];
+      console.log(ids);
+      for (const id in ids) {
+        const comic = await api.comics.getComicsById(ids[id], this.limit);
+        comics.push(comic);
+      }
+
+      runInAction(() => {
+        this.comicsCount = comics.length;
+        this.comics = comics;
         this.error = 'success';
       });
     } catch (error) {

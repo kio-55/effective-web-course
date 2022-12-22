@@ -5,17 +5,19 @@ import { Pagination } from 'antd';
 import Search from 'components/Search/Search';
 import seriesStore from 'stores/SeriesStore';
 import CardList from '../../components/Card/CardList';
-import { serialType } from 'types/comics';
+import { SerialType } from 'types/comics';
 import Error from 'components/Error/Error';
+import { useTranslation } from 'react-i18next';
 
-const cutSeriesInfo = (seriesArr: serialType[]): CardTypes[] => {
+const cutSeriesInfo = (seriesArr: SerialType[]): CardTypes[] => {
   const series: CardTypes[] = [];
   seriesArr.map((item) => {
     series.push({
       id: item.id,
       imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
       description: item.description ? item.description : 'No description yet!',
-      title: item.title
+      title: item.title,
+      page: 'series'
     });
   });
   return series;
@@ -24,6 +26,7 @@ const cutSeriesInfo = (seriesArr: serialType[]): CardTypes[] => {
 const Series: React.FC = () => {
   const { series, loading, seriesCount, seriesCurrentSlide, limit, error } =
     seriesStore;
+  const { t } = useTranslation();
 
   const [searchedValue, setSearch] = useState('');
 
@@ -44,11 +47,13 @@ const Series: React.FC = () => {
     return <Error {...{ error }}></Error>;
   }
 
+  const title: string = t('series__title');
+
   return (
     <div>
       <Search
         {...{
-          title: 'Series',
+          title: title,
           comicsCount: seriesCount,
           onSearch: onSearch
         }}

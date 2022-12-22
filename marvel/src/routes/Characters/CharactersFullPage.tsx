@@ -4,11 +4,13 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import charactersStore from 'stores/CharactersStore';
 import styles from './CharacterFullPage.module.css';
 import Error from 'components/Error/Error';
+import { useTranslation } from 'react-i18next';
 
 const CharactersFullPage: React.FC = () => {
   const { character, loading, error } = charactersStore;
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleGoBack = () => {
     navigate(-1);
@@ -27,12 +29,12 @@ const CharactersFullPage: React.FC = () => {
   return loading || !character ? (
     <>
       {loading && !character ? (
-        <h1>Loading...</h1>
+        <h1>{t('loading')}</h1>
       ) : (
         <>
-          <h1>Can't find character with same id</h1>
+          <h1>{t('error')}</h1>
           <button className={styles.button} onClick={handleGoBack}>
-            go back
+            {t('back')}
           </button>
         </>
       )}
@@ -50,7 +52,7 @@ const CharactersFullPage: React.FC = () => {
           <p>{character.description}</p>
         </div>
         <div className={styles.list}>
-          <h1 className={styles.title}>Comics</h1>
+          <h1 className={styles.title}>{t('comics_title')}</h1>
           {character.comics.items.map((comics) => {
             return (
               <Link
@@ -69,7 +71,7 @@ const CharactersFullPage: React.FC = () => {
           })}
         </div>
         <div className={styles.list}>
-          <h1 className={styles.title}>Series</h1>
+          <h1 className={styles.title}>{t('series__title')}</h1>
           {character.series.items.map((series) => {
             return (
               <Link
@@ -89,7 +91,7 @@ const CharactersFullPage: React.FC = () => {
         </div>
       </div>
       <button className={styles.button} onClick={handleGoBack}>
-        go back
+        {t('back')}
       </button>
     </div>
   );

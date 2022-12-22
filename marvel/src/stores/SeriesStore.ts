@@ -3,14 +3,14 @@ import { observable, action, makeObservable, runInAction } from 'mobx';
 
 import api from '../api';
 
-import { serialType } from '../types/comics';
+import { SerialType } from '../types/comics';
 
 class SeriesStore {
   @observable
-  series: serialType[] = [];
+  series: SerialType[] = [];
 
   @observable
-  serial: serialType | undefined;
+  serial: SerialType | undefined;
 
   @observable
   seriesCount: number = 0;
@@ -63,6 +63,35 @@ class SeriesStore {
       const serial = await api.series.getSeriesById(id, this.limit);
       runInAction(() => {
         this.serial = serial;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
+  getSeriesListByIds = async (ids: string[]): Promise<void> => {
+    try {
+      this.loading = true;
+
+      const series: SerialType[] = [];
+      console.log(ids);
+      for (const id in ids) {
+        const serial = await api.series.getSeriesById(ids[id], this.limit);
+        series.push(serial);
+      }
+
+      runInAction(() => {
+        this.seriesCount = series.length;
+        this.series = series;
         this.error = 'success';
       });
     } catch (error) {

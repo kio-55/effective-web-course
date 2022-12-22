@@ -8,16 +8,18 @@ import Error from 'components/Error/Error';
 import charactersStore from 'stores/CharactersStore';
 
 import CardList from '../../components/Card/CardList';
-import { characterType } from 'types/comics';
+import { CharacterType } from 'types/comics';
+import { useTranslation } from 'react-i18next';
 
-const cutCharactersInfo = (charactersArr: characterType[]): CardTypes[] => {
+const cutCharactersInfo = (charactersArr: CharacterType[]): CardTypes[] => {
   const characters: CardTypes[] = [];
   charactersArr.map((item) => {
     characters.push({
       id: item.id,
       imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
       description: item.description,
-      title: item.name
+      title: item.name,
+      page: 'characters'
     });
   });
   return characters;
@@ -32,6 +34,8 @@ const Characters: React.FC = () => {
     limit,
     error
   } = charactersStore;
+
+  const { t } = useTranslation();
 
   const [searchedValue, setSearch] = useState('');
 
@@ -52,11 +56,13 @@ const Characters: React.FC = () => {
     return <Error {...{ error }}></Error>;
   }
 
+  const title: string = t('characters_title');
+
   return (
     <div>
       <Search
         {...{
-          title: 'Characters',
+          title: title,
           comicsCount: charactersCount,
           onSearch: onSearch
         }}
