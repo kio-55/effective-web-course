@@ -154,6 +154,58 @@ class SeriesStore {
       });
     }
   };
+
+  @action
+  getSeriesWithOffsetAndAdd = async (offset: number): Promise<void> => {
+    try {
+      this.loading = true;
+      const series = await api.series.getSeriesWithOffset(offset, this.limit);
+      runInAction(() => {
+        this.seriesCurrentSlide = offset;
+        this.series = [...this.series, ...series];
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
+  getSeriesWithNameAndAdd = async (
+    offset: number,
+    title: string
+  ): Promise<void> => {
+    try {
+      this.loading = true;
+      const series = await api.series.getSeriesByName(
+        offset,
+        title,
+        this.limit
+      );
+      runInAction(() => {
+        this.seriesCurrentSlide = offset;
+        this.series = [...this.series, ...series.serials];
+        this.seriesCount = series.totalCount;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
 }
 
 const seriesStore = new SeriesStore();

@@ -17,6 +17,12 @@
 
 .card {
   position: relative;
+  width: 240px;
+  height: 400px;
+}
+
+.image {
+  max-height: 200px;
 }
 
 .simple,

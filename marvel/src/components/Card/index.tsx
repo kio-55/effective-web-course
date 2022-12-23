@@ -77,9 +77,9 @@ const CardItem: React.FC<CardTypes> = ({
       <Card
         onClick={handleClick}
         hoverable
-        style={{ width: 240 }}
+        style={{ width: 240, height: 400 }}
         size="small"
-        cover={<img alt="example" src={imageUrl} />}
+        cover={<img className={styles.image} alt="example" src={imageUrl} />}
       >
         <Meta title={title} description={description} style={{ height: 140 }} />
       </Card>
