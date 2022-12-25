@@ -154,6 +154,58 @@ class ComicsStore {
       });
     }
   };
+
+  @action
+  getComicsWithOffsetAndAdd = async (offset: number): Promise<void> => {
+    try {
+      this.loading = true;
+      const comics = await api.comics.getComicsWithOffset(offset, this.limit);
+      runInAction(() => {
+        this.comicsCurentSlide = offset;
+        this.comics = [...this.comics, ...comics];
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
+  getComicsWithNameAndAdd = async (
+    offset: number,
+    title: string
+  ): Promise<void> => {
+    try {
+      this.loading = true;
+      const comics = await api.comics.getComicsByName(
+        offset,
+        title,
+        this.limit
+      );
+      runInAction(() => {
+        this.comicsCurentSlide = offset;
+        this.comics = [...this.comics, ...comics.comics];
+        this.comicsCount = comics.totalCount;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
 }
 
 const comicsStore = new ComicsStore();

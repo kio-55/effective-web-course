@@ -1,41 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import type { CardTypes } from '../../types/card';
 import { observer } from 'mobx-react-lite';
-import { Pagination } from 'antd';
 import Search from 'components/Search/Search';
 import Error from 'components/Error/Error';
 
 import charactersStore from 'stores/CharactersStore';
 
 import CardList from '../../components/Card/CardList';
-import { CharacterType } from 'types/comics';
 import { useTranslation } from 'react-i18next';
+import { VirtuosoGrid } from 'react-virtuoso';
+import CardItem from 'components/Card';
 
-const cutCharactersInfo = (charactersArr: CharacterType[]): CardTypes[] => {
-  const characters: CardTypes[] = [];
-  charactersArr.map((item) => {
-    characters.push({
-      id: item.id,
-      imageUrl: item.thumbnail.path + '.' + item.thumbnail.extension,
-      description: item.description,
-      title: item.name,
-      page: 'characters'
-    });
-  });
-  return characters;
-};
+import styles from './Charactrers.module.css';
 
 const Characters: React.FC = () => {
-  const {
-    characters,
-    loading,
-    charactersCount,
-    charactersCurentSlide,
-    limit,
-    error
-  } = charactersStore;
+  const { characters, loading, charactersCount, error, limit } =
+    charactersStore;
 
   const { t } = useTranslation();
+
+  const [offset, setOffset] = useState(limit);
 
   const [searchedValue, setSearch] = useState('');
 
@@ -43,8 +26,23 @@ const Characters: React.FC = () => {
     if (value) {
       charactersStore.getCharactersWithName(0, value);
       setSearch(value);
+      setOffset(20);
+      console.log(searchedValue);
     } else {
       charactersStore.getCharactersList();
+      setSearch('');
+      setOffset(20);
+    }
+  };
+
+  const getNext = () => {
+    if (charactersCount > characters.length) {
+      if (searchedValue.length == 0) {
+        charactersStore.getCharactersWithOffsetAndAdd(offset);
+      } else {
+        charactersStore.getCharactersWithNameAndAdd(offset, searchedValue);
+      }
+      setOffset((prev) => prev + limit);
     }
   };
 
@@ -68,27 +66,35 @@ const Characters: React.FC = () => {
         }}
       ></Search>
 
-      {!loading && characters.length ? (
-        <CardList
-          {...{ cards: cutCharactersInfo(characters), loading: loading }}
-        ></CardList>
+      {!loading || characters.length ? (
+        <VirtuosoGrid
+          useWindowScroll
+          style={{
+            width: '100%'
+          }}
+          totalCount={charactersCount}
+          listClassName={styles.list}
+          data={characters}
+          endReached={getNext}
+          overscan={200}
+          itemContent={(index, character) => {
+            return (
+              <CardItem
+                key={index}
+                {...{
+                  id: character.id,
+                  imageUrl: `${character.thumbnail.path}.${character.thumbnail.extension}`,
+                  title: character.name,
+                  description: character.description,
+                  page: 'characters'
+                }}
+              ></CardItem>
+            );
+          }}
+        ></VirtuosoGrid>
       ) : (
-        <CardList
-          {...{ cards: cutCharactersInfo(characters), loading: true }}
-        ></CardList>
+        <CardList {...{ cards: [], loading: true }}></CardList>
       )}
-      <Pagination
-        simple
-        pageSize={limit}
-        total={charactersCount}
-        current={(charactersCurentSlide + limit) / limit}
-        onChange={(page) => {
-          const offset = (page - 1) * limit;
-          return searchedValue
-            ? charactersStore.getCharactersWithName(offset, searchedValue)
-            : charactersStore.getCharactersWithOffset(offset);
-        }}
-      />
     </div>
   );
 };

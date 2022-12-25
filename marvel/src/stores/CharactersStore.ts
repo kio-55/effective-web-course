@@ -135,6 +135,31 @@ class CharactersStore {
   };
 
   @action
+  getCharactersWithOffsetAndAdd = async (offset: number): Promise<void> => {
+    try {
+      this.loading = true;
+      const characters = await api.characters.getCharactersWithOffset(
+        offset,
+        this.limit
+      );
+      runInAction(() => {
+        this.charactersCurentSlide = offset;
+        this.characters = [...this.characters, ...characters];
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
   getCharactersWithName = async (
     offset: number,
     title: string
@@ -149,6 +174,36 @@ class CharactersStore {
       runInAction(() => {
         this.charactersCurentSlide = offset;
         this.characters = characters.characters;
+        this.charactersCount = characters.totalCount;
+        this.error = 'success';
+      });
+    } catch (error) {
+      console.error(error);
+      runInAction(() => {
+        this.error = 'error';
+      });
+    } finally {
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  @action
+  getCharactersWithNameAndAdd = async (
+    offset: number,
+    title: string
+  ): Promise<void> => {
+    try {
+      this.loading = true;
+      const characters = await api.characters.getCharactersByName(
+        offset,
+        title,
+        this.limit
+      );
+      runInAction(() => {
+        this.charactersCurentSlide = offset;
+        this.characters = [...this.characters, ...characters.characters];
         this.charactersCount = characters.totalCount;
         this.error = 'success';
       });

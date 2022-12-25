@@ -41,3 +41,21 @@
   color: var(--contrast-text-color);
   cursor: pointer;
 }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+  padding-right: 30px;
+}
+
+.item {
+  padding: 0.5rem;
+  width: 33%;
+  display: flex;
+  flex: none;
+  align-content: stretch;
+  box-sizing: border-box;
+}

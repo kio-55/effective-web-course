@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import charactersStore from 'stores/CharactersStore';
 import comicsStore from 'stores/ComicsStore';
+import favsStore from 'stores/FavsStore';
 import seriesStore from 'stores/SeriesStore';
 import { CardTypes } from 'types/card';
 import { CharacterType, ComicType, SerialType } from 'types/comics';
@@ -58,6 +59,7 @@ const Favourites: React.FC = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
+    favsStore.getAllFavs();
     const favCharacters = JSON.parse(
       localStorage.getItem('favs-characters') || '[]'
     );
